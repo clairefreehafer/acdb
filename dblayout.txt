@@ -1,0 +1,48 @@
+ITEMS
+- FURNITURE
+  - id (primary key)
+  - name
+  - GAME (foreign key)
+    - id (primary key)
+    - furniture_id (foreign key)
+    - population_growing (boolean)
+    - wild_world (boolean)
+    - city_folk (boolean)
+    - new_leaf (boolean)
+    - welcome_amiibo (boolean)
+  - purchase_price
+  - resale_price
+  - obtained_from
+  - set_series
+  - group
+  - hha_theme
+  - style
+  - colors
+  - CUSTOMIZATION
+    - id (primary key)
+    - furniture_id (foreign key)
+    - feature
+    - original
+    - choices
+    - fee_to_change
+    - fee_to_revert
+  - SIZE
+    - id (primary key)
+    - furniture_id (foreign key)
+    - length
+    - width
+  - other_info
+- WALLPAPER
+  - id (primary key)
+  - name
+  - GAME (foreign key)
+    - id (primary key)
+    - furniture_id (foreign key)
+    - population_growing (boolean)
+    - wild_world (boolean)
+    - city_folk (boolean)
+    - new_leaf (boolean)
+    - welcome_amiibo (boolean)
+  - purchase_price
+  - resale_price
+  - obtained_from
