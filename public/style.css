@@ -1,0 +1,20 @@
+h4 {
+  border-bottom: 1px solid #eee;
+  margin-top: 20px;
+  padding-bottom: 5px;
+}
+
+.thumbnail {
+  height: 150px;
+  margin-bottom: 0px;
+  vertical-align: middle;
+}
+
+.thumbnail img {
+  margin: auto;
+  position: absolute;
+  top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

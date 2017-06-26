@@ -9,7 +9,7 @@ export default function Page (props) {
 	return (
 		<div>
 			<Navigation />
-			<Col sm={8} smOffset={2}>
+			<Col lg={6} lgOffset={3} md={8} mdOffset={2} sm={8} smOffset={2}>
 				<Content />
 			</Col>
 		</div>

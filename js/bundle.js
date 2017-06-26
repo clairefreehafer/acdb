@@ -17686,7 +17686,7 @@ function Page(props) {
 		_react2.default.createElement(_Navigation2.default, null),
 		_react2.default.createElement(
 			_reactBootstrap.Col,
-			{ sm: 8, smOffset: 2 },
+			{ lg: 6, lgOffset: 3, md: 8, mdOffset: 2, sm: 8, smOffset: 2 },
 			_react2.default.createElement(_Content2.default, null)
 		)
 	);
@@ -40984,13 +40984,216 @@ exports.default = function (props) {
     _react2.default.createElement(
       _reactBootstrap.PageHeader,
       null,
-      'blue bed ',
+      'blue bed\xA0',
       _react2.default.createElement(
-        'small',
-        null,
-        'reorderable'
+        _reactBootstrap.OverlayTrigger,
+        { placement: 'bottom', overlay: reorderable },
+        _react2.default.createElement('img', { src: '../public/sprites/nl/items/red-present-unopened.png' })
       )
     ),
+    _react2.default.createElement(_GameSelect2.default, null),
+    _react2.default.createElement(
+      _reactBootstrap.Panel,
+      null,
+      _react2.default.createElement(
+        _reactBootstrap.Grid,
+        null,
+        _react2.default.createElement(
+          _reactBootstrap.Row,
+          null,
+          _react2.default.createElement(
+            _reactBootstrap.Col,
+            { md: 3 },
+            _react2.default.createElement(_reactBootstrap.Thumbnail, { src: '../public/sprites/hhd/items/blue-bed.png' })
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Col,
+            { md: 5 },
+            _react2.default.createElement(
+              _reactBootstrap.Row,
+              null,
+              _react2.default.createElement(
+                'h4',
+                { className: 'set' },
+                'blue series'
+              )
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Row,
+              null,
+              _react2.default.createElement(
+                'strong',
+                null,
+                'purchase price'
+              ),
+              ' ',
+              _react2.default.createElement('img', { src: '../public/sprites/nl/items/small-bells.png' }),
+              ' 2,100'
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Row,
+              null,
+              _react2.default.createElement(
+                'strong',
+                null,
+                'resale value'
+              ),
+              ' ',
+              _react2.default.createElement('img', { src: '../public/sprites/nl/items/small-bells.png' }),
+              ' 525'
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Row,
+              null,
+              _react2.default.createElement(
+                'strong',
+                null,
+                'obtained from'
+              ),
+              ' ',
+              _react2.default.createElement('img', { src: '../public/sprites/nl/map/timmyandtommy.gif' }),
+              ' Timmy & Tommy'
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _reactBootstrap.Row,
+          null,
+          _react2.default.createElement(
+            _reactBootstrap.Col,
+            { md: 8 },
+            _react2.default.createElement(
+              'h4',
+              null,
+              'properties'
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _reactBootstrap.Row,
+          null,
+          _react2.default.createElement(
+            _reactBootstrap.Col,
+            { md: 2 },
+            _react2.default.createElement(
+              'h5',
+              null,
+              _react2.default.createElement(
+                'strong',
+                null,
+                'HHA theme(s)'
+              )
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Button,
+              { bsSize: 'xsmall' },
+              'rustic'
+            )
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Col,
+            { md: 2 },
+            _react2.default.createElement(
+              'h5',
+              null,
+              'style'
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Button,
+              { bsSize: 'xsmall' },
+              'basic'
+            )
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Col,
+            { md: 2 },
+            _react2.default.createElement(
+              'h5',
+              null,
+              'color(s)'
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Button,
+              { bsSize: 'xsmall', className: 'blue' },
+              'blue'
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Button,
+              { bsSize: 'xsmall', className: 'yellow' },
+              'yellow'
+            )
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Col,
+            { md: 2 },
+            _react2.default.createElement(
+              'h5',
+              null,
+              'size'
+            ),
+            '2x1'
+          )
+        ),
+        _react2.default.createElement(
+          _reactBootstrap.Row,
+          null,
+          _react2.default.createElement(
+            _reactBootstrap.Col,
+            { md: 8 },
+            _react2.default.createElement(
+              'h4',
+              null,
+              'customization'
+            )
+          )
+        )
+      )
+    )
+  );
+};
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactBootstrap = __webpack_require__(344);
+
+var _GameSelect = __webpack_require__(443);
+
+var _GameSelect2 = _interopRequireDefault(_GameSelect);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var reorderable = _react2.default.createElement(
+  _reactBootstrap.Tooltip,
+  null,
+  'reorderable'
+);
+
+/***/ }),
+/* 443 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = GameSelect;
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactBootstrap = __webpack_require__(344);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function GameSelect(props) {
+  return _react2.default.createElement(
+    'div',
+    null,
     _react2.default.createElement(
       _reactBootstrap.Tab.Container,
       { id: 'game-select', defaultActiveKey: 'nl' },
@@ -41031,120 +41234,9 @@ exports.default = function (props) {
           )
         )
       )
-    ),
-    _react2.default.createElement(
-      _reactBootstrap.Panel,
-      null,
-      _react2.default.createElement(
-        _reactBootstrap.Grid,
-        null,
-        _react2.default.createElement(
-          _reactBootstrap.Row,
-          null,
-          _react2.default.createElement(
-            _reactBootstrap.Col,
-            { md: 3 },
-            'image'
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Col,
-            { md: 5 },
-            _react2.default.createElement(
-              _reactBootstrap.Row,
-              null,
-              _react2.default.createElement(
-                'strong',
-                null,
-                'blue series'
-              )
-            ),
-            _react2.default.createElement(
-              _reactBootstrap.Row,
-              null,
-              _react2.default.createElement(
-                'strong',
-                null,
-                'purchase price:'
-              ),
-              ' 2,100 bells'
-            ),
-            _react2.default.createElement(
-              _reactBootstrap.Row,
-              null,
-              _react2.default.createElement(
-                'strong',
-                null,
-                'resale value:'
-              ),
-              ' 525 bells'
-            ),
-            _react2.default.createElement(
-              _reactBootstrap.Row,
-              null,
-              _react2.default.createElement(
-                'strong',
-                null,
-                'obtained from:'
-              ),
-              ' Timmy & Tommy'
-            )
-          )
-        ),
-        _react2.default.createElement(
-          _reactBootstrap.Row,
-          null,
-          _react2.default.createElement(
-            _reactBootstrap.Col,
-            { md: 7 },
-            _react2.default.createElement(
-              _reactBootstrap.Row,
-              null,
-              _react2.default.createElement(
-                'strong',
-                null,
-                'HHA theme(s):'
-              ),
-              ' rustic'
-            ),
-            _react2.default.createElement(
-              _reactBootstrap.Row,
-              null,
-              _react2.default.createElement(
-                'strong',
-                null,
-                'style:'
-              ),
-              ' basic'
-            ),
-            _react2.default.createElement(
-              _reactBootstrap.Row,
-              null,
-              _react2.default.createElement(
-                'strong',
-                null,
-                'color(s):'
-              ),
-              ' blue, yellow'
-            )
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Col,
-            { md: 1 },
-            '2x1'
-          )
-        )
-      )
     )
   );
-};
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactBootstrap = __webpack_require__(344);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+}
 
 /***/ })
 /******/ ]);
