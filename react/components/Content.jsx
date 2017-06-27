@@ -7,6 +7,11 @@ import Customization from './Customization';
 const reorderable = (
   <Tooltip>reorderable</Tooltip>
 );
+
+const bellBoom = (
+  <Tooltip>with bell boom ordinance</Tooltip>
+);
+
 export default function (props) {
   return (
     <div>
@@ -20,43 +25,77 @@ export default function (props) {
       <GameSelect />
 
       <Panel>
-        <Grid>
-          <Row>
-            <Col md={3}><Thumbnail src="../public/sprites/hhd/items/blue-bed.png" /></Col>
-            <Col md={5}>
-              <Row><h4 className="set">blue series</h4></Row>
-              <Row><strong>purchase price</strong> <img src="../public/sprites/nl/items/small-bells.png" /> 2,100</Row>
-              <Row><strong>resale value</strong> <img src="../public/sprites/nl/items/small-bells.png" /> 525</Row>
-              <Row><strong>obtained from</strong> <img src="../public/sprites/nl/map/timmyandtommy.gif" /> Timmy & Tommy</Row>
-            </Col>
-          </Row>
-          <Row>
-          <Col md={8}>
+        <Row>
+          <Col sm={3}>
+            <Thumbnail src="../public/sprites/hhd/items/blue-bed.png" />
+          </Col>
+          <Col sm={9}>
+            <Row>
+              <Col sm={12}>
+                <h4 className="set">blue series</h4>
+              </Col>
+            </Row>
+            <Row>
+              <Col sm={6}>
+                <h5>purchase price</h5>
+                <img src="../public/sprites/nl/items/small-bells.png" /> 2,100
+              </Col>
+              <Col sm={6}>
+                <h5>&nbsp;</h5>
+                <OverlayTrigger placement="top" overlay={bellBoom}>
+                  <img src="../public/sprites/nl/items/big-bells.png" />
+                </OverlayTrigger>
+                  &nbsp;2,520
+              </Col>
+            </Row>
+            <Row>
+              <Col sm={6}>
+                <h5>resale value</h5>
+                <img src="../public/sprites/nl/items/small-bells.png" /> 525
+              </Col>
+              <Col sm={6}>
+                <h5>&nbsp;</h5>
+                <OverlayTrigger placement="top" overlay={bellBoom}>
+                  <img src="../public/sprites/nl/items/big-bells.png" />
+                </OverlayTrigger>
+                &nbsp;630
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+        <Row>
+          <Col sm={12}>
+            <strong>obtained from</strong> <img src="../public/sprites/nl/map/timmyandtommy.gif" /> Timmy & Tommy
+          </Col>
+        </Row>
+        <Row>
+          <Col sm={12}>
             <h4>properties</h4>
           </Col>
-          </Row>
-          <Row>
-            <Col md={2}>
-              <h5><strong>HHA theme(s)</strong></h5>
-              <Button bsSize="xsmall">rustic</Button>
-            </Col>
-            <Col md={2}>
-              <h5>style</h5>
-              <Button bsSize="xsmall">basic</Button>
-            </Col>
-            <Col md={2}>
-              <h5>color(s)</h5>
-              <Button bsSize="xsmall" className="blue">blue</Button>
-              <Button bsSize="xsmall" className="yellow">yellow</Button>
-            </Col>
-            <Col md={2}>
-              <h5>size</h5>
-              2x1
-            </Col>
-          </Row>
+        </Row>
+        <Row>
+          <Col sm={3}>
+            <h5><strong>HHA theme(s)</strong></h5>
+            <Button bsSize="xsmall">rustic</Button>
+          </Col>
+          <Col sm={3}>
+            <h5>style</h5>
+            <Button bsSize="xsmall">basic</Button>
+          </Col>
+          <Col sm={3}>
+            <h5>color(s)</h5>
+            <Button bsSize="xsmall" id="blue">blue</Button>
+            <Button bsSize="xsmall" id="yellow">yellow</Button>
+          </Col>
+          <Col sm={3}>
+            <h5>size</h5>
+            <Button bsStyle="info" bsSize="xsmall" disabled>&nbsp;&nbsp;&nbsp;</Button>
+            <Button bsStyle="info" bsSize="xsmall" disabled>&nbsp;&nbsp;&nbsp;</Button>
 
-          <Customization />
-        </Grid>
+          </Col>
+        </Row>
+
+        <Customization />
       </Panel>
     </div>
   )

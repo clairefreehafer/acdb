@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
-import { Col, Row, Table } from 'react-bootstrap';
+import { Button, Col, Row, Table } from 'react-bootstrap';
+
+import CustomizedImages from './CustomizedImages';
 
 export default class Customization extends Component {
   constructor (props) {
@@ -9,19 +11,49 @@ export default class Customization extends Component {
     this.state = {
       showImages: false
     };
+
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+  }
+
+  openModal () {
+    this.setState({
+      showImages: true
+    });
+  }
+
+  closeModal () {
+    this.setState({
+      showImages: false
+    });
   }
 
   render () {
     return (
       <div>
         <Row>
-          <Col md={8}>
+          <Col sm={12}>
             <h4>customization</h4>
           </Col>
         </Row>
 
         <Row>
-          <Col md={8}>
+          <Col sm={4}>
+            <Button onClick={this.openModal}>view pictures</Button>
+          </Col>
+          <Col sm={4}>
+            <h5>fee to change</h5>
+            <img src="../public/sprites/nl/items/small-bells.png" /> 210
+          </Col>
+
+          <Col sm={4}>
+            <h5>fee to revert</h5>
+            <img src="../public/sprites/nl/items/small-bells.png" /> 105
+          </Col>
+        </Row>
+
+        <Row>
+          <Col sm={12}>
             <Table responsive condensed>
               <thead>
                 <tr>
@@ -37,7 +69,7 @@ export default class Customization extends Component {
                   <td>
                     light blue<br />
                     dark blue<br />
-                    sapphire<br />
+                    <img src="../public/sprites/nl/items/sapphire.png" /> sapphire
                   </td>
                 </tr>
                 <tr>
@@ -47,20 +79,12 @@ export default class Customization extends Component {
                 </tr>
               </tbody>
             </Table>
-
-            {/* costs */}
-            <Col md={6}>
-              <h5>fee to change <img src="../public/sprites/nl/items/customized-leaf.png" /></h5>
-              <img src="../public/sprites/nl/items/small-bells.png" /> 210
-            </Col>
-
-            <Col md={6}>
-              <h5>fee to revert <img src="../public/sprites/nl/items/furniture-leaf.png" /></h5>
-              <img src="../public/sprites/nl/items/small-bells.png" /> 105
-            </Col>
-
           </Col>
         </Row>
+        <CustomizedImages
+          showImages={this.state.showImages}
+          handleClose={this.closeModal}
+        />
       </div>
     )
   }
