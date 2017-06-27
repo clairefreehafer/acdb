@@ -41240,7 +41240,8 @@ function GameSelect(props) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = Customization;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(0);
 
@@ -41250,131 +41251,159 @@ var _reactBootstrap = __webpack_require__(344);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Customization(props) {
-  return _react2.default.createElement(
-    'div',
-    null,
-    _react2.default.createElement(
-      _reactBootstrap.Row,
-      null,
-      _react2.default.createElement(
-        _reactBootstrap.Col,
-        { md: 8 },
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Customization = function (_Component) {
+  _inherits(Customization, _Component);
+
+  function Customization(props) {
+    _classCallCheck(this, Customization);
+
+    var _this = _possibleConstructorReturn(this, (Customization.__proto__ || Object.getPrototypeOf(Customization)).call(this));
+
+    _this.state = {
+      showImages: false
+    };
+    return _this;
+  }
+
+  _createClass(Customization, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
         _react2.default.createElement(
-          'h4',
+          _reactBootstrap.Row,
           null,
-          'customization'
-        )
-      )
-    ),
-    _react2.default.createElement(
-      _reactBootstrap.Row,
-      null,
-      _react2.default.createElement(
-        _reactBootstrap.Col,
-        { md: 8 },
-        _react2.default.createElement(
-          _reactBootstrap.Table,
-          { responsive: true, condensed: true },
           _react2.default.createElement(
-            'thead',
-            null,
+            _reactBootstrap.Col,
+            { md: 8 },
             _react2.default.createElement(
-              'tr',
+              'h4',
               null,
-              _react2.default.createElement(
-                'th',
-                null,
-                'feature'
-              ),
-              _react2.default.createElement(
-                'th',
-                null,
-                'original'
-              ),
-              _react2.default.createElement(
-                'th',
-                null,
-                'options'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'tbody',
-            null,
-            _react2.default.createElement(
-              'tr',
-              null,
-              _react2.default.createElement(
-                'td',
-                null,
-                'wood color'
-              ),
-              _react2.default.createElement(
-                'td',
-                null,
-                'blue'
-              ),
-              _react2.default.createElement(
-                'td',
-                null,
-                'light blue',
-                _react2.default.createElement('br', null),
-                'dark blue',
-                _react2.default.createElement('br', null),
-                'sapphire',
-                _react2.default.createElement('br', null)
-              )
-            ),
-            _react2.default.createElement(
-              'tr',
-              null,
-              _react2.default.createElement(
-                'td',
-                null,
-                'bedding'
-              ),
-              _react2.default.createElement(
-                'td',
-                null,
-                'yellow'
-              ),
-              _react2.default.createElement(
-                'td',
-                null,
-                '???'
-              )
+              'customization'
             )
           )
         ),
         _react2.default.createElement(
-          _reactBootstrap.Col,
-          { md: 6 },
+          _reactBootstrap.Row,
+          null,
           _react2.default.createElement(
-            'h5',
-            null,
-            'fee to change ',
-            _react2.default.createElement('img', { src: '../public/sprites/nl/items/customized-leaf.png' })
-          ),
-          _react2.default.createElement('img', { src: '../public/sprites/nl/items/small-bells.png' }),
-          ' 210'
-        ),
-        _react2.default.createElement(
-          _reactBootstrap.Col,
-          { md: 6 },
-          _react2.default.createElement(
-            'h5',
-            null,
-            'fee to revert ',
-            _react2.default.createElement('img', { src: '../public/sprites/nl/items/furniture-leaf.png' })
-          ),
-          _react2.default.createElement('img', { src: '../public/sprites/nl/items/small-bells.png' }),
-          ' 105'
+            _reactBootstrap.Col,
+            { md: 8 },
+            _react2.default.createElement(
+              _reactBootstrap.Table,
+              { responsive: true, condensed: true },
+              _react2.default.createElement(
+                'thead',
+                null,
+                _react2.default.createElement(
+                  'tr',
+                  null,
+                  _react2.default.createElement(
+                    'th',
+                    null,
+                    'feature'
+                  ),
+                  _react2.default.createElement(
+                    'th',
+                    null,
+                    'original'
+                  ),
+                  _react2.default.createElement(
+                    'th',
+                    null,
+                    'options'
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'tbody',
+                null,
+                _react2.default.createElement(
+                  'tr',
+                  null,
+                  _react2.default.createElement(
+                    'td',
+                    null,
+                    'wood color'
+                  ),
+                  _react2.default.createElement(
+                    'td',
+                    null,
+                    'blue'
+                  ),
+                  _react2.default.createElement(
+                    'td',
+                    null,
+                    'light blue',
+                    _react2.default.createElement('br', null),
+                    'dark blue',
+                    _react2.default.createElement('br', null),
+                    'sapphire',
+                    _react2.default.createElement('br', null)
+                  )
+                ),
+                _react2.default.createElement(
+                  'tr',
+                  null,
+                  _react2.default.createElement(
+                    'td',
+                    null,
+                    'bedding'
+                  ),
+                  _react2.default.createElement(
+                    'td',
+                    null,
+                    'yellow'
+                  ),
+                  _react2.default.createElement(
+                    'td',
+                    null,
+                    '???'
+                  )
+                )
+              )
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { md: 6 },
+              _react2.default.createElement(
+                'h5',
+                null,
+                'fee to change ',
+                _react2.default.createElement('img', { src: '../public/sprites/nl/items/customized-leaf.png' })
+              ),
+              _react2.default.createElement('img', { src: '../public/sprites/nl/items/small-bells.png' }),
+              ' 210'
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { md: 6 },
+              _react2.default.createElement(
+                'h5',
+                null,
+                'fee to revert ',
+                _react2.default.createElement('img', { src: '../public/sprites/nl/items/furniture-leaf.png' })
+              ),
+              _react2.default.createElement('img', { src: '../public/sprites/nl/items/small-bells.png' }),
+              ' 105'
+            )
+          )
         )
-      )
-    )
-  );
-}
+      );
+    }
+  }]);
+
+  return Customization;
+}(_react.Component);
+
+exports.default = Customization;
 
 /***/ })
 /******/ ]);
