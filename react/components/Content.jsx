@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Col, Grid, Thumbnail, OverlayTrigger, PageHeader, Panel, Row, Tab, Tabs, Tooltip } from 'react-bootstrap';
 
 import GameSelect from './GameSelect';
+import Customization from './Customization';
 
 const reorderable = (
   <Tooltip>reorderable</Tooltip>
@@ -53,11 +54,8 @@ export default function (props) {
               2x1
             </Col>
           </Row>
-          <Row>
-            <Col md={8}>
-              <h4>customization</h4>
-            </Col>
-          </Row>
+
+          <Customization />
         </Grid>
       </Panel>
     </div>

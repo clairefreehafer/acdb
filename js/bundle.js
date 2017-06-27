@@ -41134,19 +41134,7 @@ exports.default = function (props) {
             '2x1'
           )
         ),
-        _react2.default.createElement(
-          _reactBootstrap.Row,
-          null,
-          _react2.default.createElement(
-            _reactBootstrap.Col,
-            { md: 8 },
-            _react2.default.createElement(
-              'h4',
-              null,
-              'customization'
-            )
-          )
-        )
+        _react2.default.createElement(_Customization2.default, null)
       )
     )
   );
@@ -41161,6 +41149,10 @@ var _reactBootstrap = __webpack_require__(344);
 var _GameSelect = __webpack_require__(443);
 
 var _GameSelect2 = _interopRequireDefault(_GameSelect);
+
+var _Customization = __webpack_require__(444);
+
+var _Customization2 = _interopRequireDefault(_Customization);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -41232,6 +41224,152 @@ function GameSelect(props) {
               'happy home designer'
             )
           )
+        )
+      )
+    )
+  );
+}
+
+/***/ }),
+/* 444 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = Customization;
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactBootstrap = __webpack_require__(344);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Customization(props) {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      _reactBootstrap.Row,
+      null,
+      _react2.default.createElement(
+        _reactBootstrap.Col,
+        { md: 8 },
+        _react2.default.createElement(
+          'h4',
+          null,
+          'customization'
+        )
+      )
+    ),
+    _react2.default.createElement(
+      _reactBootstrap.Row,
+      null,
+      _react2.default.createElement(
+        _reactBootstrap.Col,
+        { md: 8 },
+        _react2.default.createElement(
+          _reactBootstrap.Table,
+          { responsive: true, condensed: true },
+          _react2.default.createElement(
+            'thead',
+            null,
+            _react2.default.createElement(
+              'tr',
+              null,
+              _react2.default.createElement(
+                'th',
+                null,
+                'feature'
+              ),
+              _react2.default.createElement(
+                'th',
+                null,
+                'original'
+              ),
+              _react2.default.createElement(
+                'th',
+                null,
+                'options'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'tbody',
+            null,
+            _react2.default.createElement(
+              'tr',
+              null,
+              _react2.default.createElement(
+                'td',
+                null,
+                'wood color'
+              ),
+              _react2.default.createElement(
+                'td',
+                null,
+                'blue'
+              ),
+              _react2.default.createElement(
+                'td',
+                null,
+                'light blue',
+                _react2.default.createElement('br', null),
+                'dark blue',
+                _react2.default.createElement('br', null),
+                'sapphire',
+                _react2.default.createElement('br', null)
+              )
+            ),
+            _react2.default.createElement(
+              'tr',
+              null,
+              _react2.default.createElement(
+                'td',
+                null,
+                'bedding'
+              ),
+              _react2.default.createElement(
+                'td',
+                null,
+                'yellow'
+              ),
+              _react2.default.createElement(
+                'td',
+                null,
+                '???'
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _reactBootstrap.Col,
+          { md: 6 },
+          _react2.default.createElement(
+            'h5',
+            null,
+            'fee to change ',
+            _react2.default.createElement('img', { src: '../public/sprites/nl/items/customized-leaf.png' })
+          ),
+          _react2.default.createElement('img', { src: '../public/sprites/nl/items/small-bells.png' }),
+          ' 210'
+        ),
+        _react2.default.createElement(
+          _reactBootstrap.Col,
+          { md: 6 },
+          _react2.default.createElement(
+            'h5',
+            null,
+            'fee to revert ',
+            _react2.default.createElement('img', { src: '../public/sprites/nl/items/furniture-leaf.png' })
+          ),
+          _react2.default.createElement('img', { src: '../public/sprites/nl/items/small-bells.png' }),
+          ' 105'
         )
       )
     )
