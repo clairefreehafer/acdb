@@ -15,7 +15,7 @@ module.exports = app
   // serve api
   //.use('/api', require('./api'))
 
-  // .get('/*', (_, res) => res.sendFile(resolve(__dirname, '..', 'public', 'index.html')))
+  .get('/*', (_, res) => res.sendFile(resolve(__dirname, '..', 'public', 'index.html')))
 
   // error handling middleware
   .use((err, req, res, next) => {
