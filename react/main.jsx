@@ -1,9 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import { BrowserRouter, IndexRedirect, Route } from 'react-router-dom';
 
-import Page from './components/Page'
+import App from './components/App';
 
-ReactDOM.render(
-	<Page />,
+render(
+  <BrowserRouter>
+	  <Route path="/" component={App} />
+  </BrowserRouter>,
   document.getElementById('root')
 );
+

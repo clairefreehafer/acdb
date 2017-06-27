@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   entry: './react/main.jsx',
 	output: {
-    path: path.resolve(__dirname, 'js'),
+    path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js'
   },
 	module: {
