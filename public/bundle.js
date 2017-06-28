@@ -18808,9 +18808,13 @@ var _Furniture = __webpack_require__(483);
 
 var _Furniture2 = _interopRequireDefault(_Furniture);
 
-var _FurnitureDetails = __webpack_require__(486);
+var _FurnitureDetailsNL = __webpack_require__(489);
 
-var _FurnitureDetails2 = _interopRequireDefault(_FurnitureDetails);
+var _FurnitureDetailsNL2 = _interopRequireDefault(_FurnitureDetailsNL);
+
+var _WallpaperDetailsNL = __webpack_require__(490);
+
+var _WallpaperDetailsNL2 = _interopRequireDefault(_WallpaperDetailsNL);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18825,7 +18829,8 @@ function App(props) {
       { sm: 10, smOffset: 1, md: 8, mdOffset: 2, lg: 6, lgOffset: 3 },
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Landing2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { path: '/furniture', component: _Furniture2.default }),
-      _react2.default.createElement(_reactRouterDom.Route, { path: '/blue-bed', component: _FurnitureDetails2.default })
+      _react2.default.createElement(_reactRouterDom.Route, { path: '/blue-bed', component: _FurnitureDetailsNL2.default }),
+      _react2.default.createElement(_reactRouterDom.Route, { path: '/blue-wall', component: _WallpaperDetailsNL2.default })
     )
   );
 }
@@ -18894,6 +18899,12 @@ function Landing(props) {
         _reactRouterDom.Link,
         { to: '/blue-bed' },
         'furniture page'
+      ),
+      _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        _reactRouterDom.Link,
+        { to: '/blue-wall' },
+        'wallpaper page'
       )
     )
   );
@@ -44603,7 +44614,77 @@ function CustomizedImages(props) {
 }
 
 /***/ }),
-/* 486 */
+/* 486 */,
+/* 487 */,
+/* 488 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = GameSelect;
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactBootstrap = __webpack_require__(40);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function GameSelect(props) {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      _reactBootstrap.Tab.Container,
+      { id: 'game-select', defaultActiveKey: 'nl' },
+      _react2.default.createElement(
+        _reactBootstrap.Row,
+        null,
+        _react2.default.createElement(
+          _reactBootstrap.Col,
+          { md: 12 },
+          _react2.default.createElement(
+            _reactBootstrap.Nav,
+            { bsStyle: 'pills' },
+            _react2.default.createElement(
+              _reactBootstrap.NavItem,
+              { eventKey: 'pg' },
+              'population growing'
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.NavItem,
+              { eventKey: 'ww' },
+              'wild world'
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.NavItem,
+              { eventKey: 'cf' },
+              'city folk'
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.NavItem,
+              { eventKey: 'nl' },
+              'new leaf'
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.NavItem,
+              { eventKey: 'hhd' },
+              'happy home designer'
+            )
+          )
+        )
+      )
+    )
+  );
+}
+
+/***/ }),
+/* 489 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44854,8 +44935,7 @@ var bellBoom = _react2.default.createElement(
 );
 
 /***/ }),
-/* 487 */,
-/* 488 */
+/* 490 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44864,7 +44944,8 @@ var bellBoom = _react2.default.createElement(
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = GameSelect;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(0);
 
@@ -44872,55 +44953,267 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactBootstrap = __webpack_require__(40);
 
+var _GameSelect = __webpack_require__(488);
+
+var _GameSelect2 = _interopRequireDefault(_GameSelect);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function GameSelect(props) {
-  return _react2.default.createElement(
-    'div',
-    null,
-    _react2.default.createElement(
-      _reactBootstrap.Tab.Container,
-      { id: 'game-select', defaultActiveKey: 'nl' },
-      _react2.default.createElement(
-        _reactBootstrap.Row,
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var reorderable = _react2.default.createElement(
+  _reactBootstrap.Tooltip,
+  null,
+  'reorderable'
+);
+
+var bellBoom = _react2.default.createElement(
+  _reactBootstrap.Tooltip,
+  null,
+  'with bell boom ordinance'
+);
+
+var WallpaperDetailsNL = function (_Component) {
+  _inherits(WallpaperDetailsNL, _Component);
+
+  function WallpaperDetailsNL(props) {
+    _classCallCheck(this, WallpaperDetailsNL);
+
+    var _this = _possibleConstructorReturn(this, (WallpaperDetailsNL.__proto__ || Object.getPrototypeOf(WallpaperDetailsNL)).call(this));
+
+    _this.state = {
+      name: 'blue wall',
+      image: {},
+      reorderable: true,
+      purchasePrice: 1260, // probably will be a string...
+      resaleValue: 315, // ^
+      obtainedFrom: 'Timmy & Tommy',
+      set: 'blue series',
+      hhaTheme: ['none'],
+      style: 'basic',
+      color: ['blue']
+    };
+    return _this;
+  }
+
+  _createClass(WallpaperDetailsNL, [{
+    key: 'render',
+    value: function render() {
+      var item = this.state;
+
+      return _react2.default.createElement(
+        'div',
         null,
         _react2.default.createElement(
-          _reactBootstrap.Col,
-          { md: 12 },
+          _reactBootstrap.PageHeader,
+          null,
+          item.name,
+          '\xA0',
+          item.reorderable ? _react2.default.createElement(
+            _reactBootstrap.OverlayTrigger,
+            { placement: 'bottom', overlay: reorderable },
+            _react2.default.createElement('img', { src: 'images/sprites/nl/items/red-present-unopened.png' })
+          ) : null
+        ),
+        _react2.default.createElement(_GameSelect2.default, null),
+        _react2.default.createElement(
+          _reactBootstrap.Panel,
+          null,
           _react2.default.createElement(
-            _reactBootstrap.Nav,
-            { bsStyle: 'pills' },
+            _reactBootstrap.Row,
+            null,
             _react2.default.createElement(
-              _reactBootstrap.NavItem,
-              { eventKey: 'pg' },
-              'population growing'
+              _reactBootstrap.Col,
+              { sm: 3 },
+              _react2.default.createElement(_reactBootstrap.Thumbnail, { className: 'content-thumbnail', src: 'images/sprites/hhd/items/blue-bed.png' })
             ),
             _react2.default.createElement(
-              _reactBootstrap.NavItem,
-              { eventKey: 'ww' },
-              'wild world'
+              _reactBootstrap.Col,
+              { sm: 9 },
+              _react2.default.createElement(
+                _reactBootstrap.Row,
+                null,
+                _react2.default.createElement(
+                  _reactBootstrap.Col,
+                  { sm: 12 },
+                  _react2.default.createElement(
+                    'h4',
+                    { className: 'set' },
+                    item.set
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                _reactBootstrap.Row,
+                null,
+                _react2.default.createElement(
+                  _reactBootstrap.Col,
+                  { sm: 6 },
+                  _react2.default.createElement(
+                    'h5',
+                    null,
+                    'purchase price'
+                  ),
+                  _react2.default.createElement('img', { src: 'images/sprites/nl/items/small-bells.png' }),
+                  ' ',
+                  item.purchasePrice
+                ),
+                _react2.default.createElement(
+                  _reactBootstrap.Col,
+                  { sm: 6 },
+                  _react2.default.createElement(
+                    'h5',
+                    null,
+                    '\xA0'
+                  ),
+                  _react2.default.createElement(
+                    _reactBootstrap.OverlayTrigger,
+                    { placement: 'top', overlay: bellBoom },
+                    _react2.default.createElement('img', { src: 'images/sprites/nl/items/big-bells.png' })
+                  ),
+                  '\xA0',
+                  item.purchasePrice + item.purchasePrice * 0.2
+                )
+              ),
+              _react2.default.createElement(
+                _reactBootstrap.Row,
+                null,
+                _react2.default.createElement(
+                  _reactBootstrap.Col,
+                  { sm: 6 },
+                  _react2.default.createElement(
+                    'h5',
+                    null,
+                    'resale value'
+                  ),
+                  _react2.default.createElement('img', { src: 'images/sprites/nl/items/small-bells.png' }),
+                  ' ',
+                  item.resaleValue
+                ),
+                _react2.default.createElement(
+                  _reactBootstrap.Col,
+                  { sm: 6 },
+                  _react2.default.createElement(
+                    'h5',
+                    null,
+                    '\xA0'
+                  ),
+                  _react2.default.createElement(
+                    _reactBootstrap.OverlayTrigger,
+                    { placement: 'top', overlay: bellBoom },
+                    _react2.default.createElement('img', { src: 'images/sprites/nl/items/big-bells.png' })
+                  ),
+                  '\xA0',
+                  item.resaleValue + item.resaleValue * 0.2
+                )
+              )
+            )
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { sm: 12 },
+              _react2.default.createElement(
+                'strong',
+                null,
+                'obtained from'
+              ),
+              ' ',
+              _react2.default.createElement('img', { src: 'images/sprites/nl/map/timmyandtommy.gif' }),
+              ' ',
+              item.obtainedFrom
+            )
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { sm: 12 },
+              _react2.default.createElement(
+                'h4',
+                null,
+                'properties'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { sm: 4 },
+              _react2.default.createElement(
+                'h5',
+                null,
+                _react2.default.createElement(
+                  'strong',
+                  null,
+                  'HHA theme(s)'
+                )
+              ),
+              item.hhaTheme.map(function (theme) {
+                return _react2.default.createElement(
+                  _reactBootstrap.Button,
+                  {
+                    bsSize: 'xsmall',
+                    id: theme,
+                    key: theme
+                  },
+                  theme
+                );
+              })
             ),
             _react2.default.createElement(
-              _reactBootstrap.NavItem,
-              { eventKey: 'cf' },
-              'city folk'
+              _reactBootstrap.Col,
+              { sm: 4 },
+              _react2.default.createElement(
+                'h5',
+                null,
+                'style'
+              ),
+              _react2.default.createElement(
+                _reactBootstrap.Button,
+                { bsSize: 'xsmall', id: item.style },
+                item.style
+              )
             ),
             _react2.default.createElement(
-              _reactBootstrap.NavItem,
-              { eventKey: 'nl' },
-              'new leaf'
-            ),
-            _react2.default.createElement(
-              _reactBootstrap.NavItem,
-              { eventKey: 'hhd' },
-              'happy home designer'
+              _reactBootstrap.Col,
+              { sm: 4 },
+              _react2.default.createElement(
+                'h5',
+                null,
+                'color(s)'
+              ),
+              item.color.map(function (color) {
+                return _react2.default.createElement(
+                  _reactBootstrap.Button,
+                  {
+                    bsSize: 'xsmall',
+                    id: color,
+                    key: color
+                  },
+                  color
+                );
+              })
             )
           )
         )
-      )
-    )
-  );
-}
+      );
+    }
+  }]);
+
+  return WallpaperDetailsNL;
+}(_react.Component);
+
+exports.default = WallpaperDetailsNL;
 
 /***/ })
 /******/ ]);

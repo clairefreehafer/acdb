@@ -4,14 +4,6 @@ acdb is something i've wanted to create for a long time. nintendo's animal cross
 
 there are many resources like this that already exist, and most of them are great. but they all seem to be missing one category of information or another. i seek to remedy this with acdb.
 
-currently, acdb exists only in pre-filled react components, one for each page type. it's still being designed. eventually, it will be populated with information from airtable, have express routes, and extensive search and filter functionality.
+currently, acdb exists as a mess of prefilled react components. it's still being designed. eventually, it will be populated with information from airtable, have express routes, and extensive search and filter functionality.
 
 in the mean time, acdb is helping me learn more about responsive design, so please excuse any wonkiness if viewing on a smaller screen. it currently looks best on a computer. :-)
-
-### animal crossing resources
-
-(these are mainly for me)
-- [animal crossing wiki](http://animalcrossing.wiki.com)
-- [customized new leaf furniture](http://customnewleaf.tumblr.com/)
-- [moriDB](https://www.moridb.com)
-- [nookipedia](http://www.nookipedia.com)

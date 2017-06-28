@@ -9,7 +9,8 @@ export default function Landing (props) {
         currently, this is an exercise in web development by <a href="https://www.github.com/clairefreehafer">claire freehafer</a>. visit the <a href="https://www.github.com/clairefreehafer/acdb">github repo</a> to learn a bit more about the project.
         <h4>sample pages</h4>
         <Link to="/furniture">list of furniture</Link><br />
-        <Link to="/blue-bed">furniture page</Link>
+        <Link to="/blue-bed">furniture page</Link><br />
+        <Link to="/blue-wall">wallpaper page</Link>
       </Panel>
     </div>
   );
