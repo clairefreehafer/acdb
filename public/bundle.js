@@ -18819,7 +18819,6 @@ var _WallpaperDetailsNL2 = _interopRequireDefault(_WallpaperDetailsNL);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App(props) {
-  console.log(props);
   return _react2.default.createElement(
     'div',
     { id: 'app' },
@@ -18871,13 +18870,7 @@ function Landing(props) {
           null,
           'welcome to the animal crossing database'
         ) },
-      'currently, this is an exercise in web development by ',
-      _react2.default.createElement(
-        'a',
-        { href: 'https://www.github.com/clairefreehafer' },
-        'claire freehafer'
-      ),
-      '. visit the ',
+      'currently, this is an exercise in web development. visit the ',
       _react2.default.createElement(
         'a',
         { href: 'https://www.github.com/clairefreehafer/acdb' },
@@ -45029,7 +45022,7 @@ var WallpaperDetailsNL = function (_Component) {
             _react2.default.createElement(
               _reactBootstrap.Col,
               { sm: 3 },
-              _react2.default.createElement(_reactBootstrap.Thumbnail, { className: 'content-thumbnail', src: 'images/sprites/hhd/items/blue-bed.png' })
+              _react2.default.createElement(_reactBootstrap.Thumbnail, { className: 'details-thumbnail', src: 'images/sprites/hhd/items/blue-bed.png' })
             ),
             _react2.default.createElement(
               _reactBootstrap.Col,

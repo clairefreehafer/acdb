@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Col, Grid, Thumbnail, OverlayTrigger, PageHeader, Panel, Row, Tab, Tabs, Tooltip } from 'react-bootstrap';
+import { Button, Col, Grid, Thumbnail, OverlayTrigger, PageHeader, Panel, Row, Tooltip } from 'react-bootstrap';
 
 import GameSelect from '../GameSelect';
 
@@ -53,7 +53,7 @@ export default class WallpaperDetailsNL extends Component {
           <Row>
            {/***** IMAGE *****/}
             <Col sm={3}>
-              <Thumbnail className="content-thumbnail" src="images/sprites/hhd/items/blue-bed.png" />
+              <Thumbnail className="details-thumbnail" src="images/sprites/hhd/items/blue-bed.png" />
             </Col>
             <Col sm={9}>
               <Row>

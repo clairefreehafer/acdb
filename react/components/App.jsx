@@ -9,7 +9,6 @@ import FurnitureDetailsNL from './details-pages/furniture/FurnitureDetailsNL';
 import WallpaperDetailsNL from './details-pages/wallpaper/WallpaperDetailsNL';
 
 export default function App (props) {
-  console.log(props)
   return (
     <div id="app">
       <Navigation />

@@ -4,13 +4,13 @@ h4 {
   padding-bottom: 5px;
 }
 
-.content-thumbnail {
+.details-thumbnail {
   height: 175px;
   margin-bottom: 20px;
   vertical-align: middle;
 }
 
-.content-thumbnail img {
+.details-thumbnail img {
   margin: auto;
   position: absolute;
   top: 0;
