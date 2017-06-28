@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import { MenuItem, Nav, NavDropdown, Navbar } from 'react-bootstrap';
 
 export default function (props) {
@@ -7,7 +7,7 @@ export default function (props) {
     <Navbar>
       <Navbar.Header>
         <Navbar.Brand>
-          <a href="#">acdb</a>
+          <Link to="/">acdb</Link>
         </Navbar.Brand>
         <Navbar.Toggle />
       </Navbar.Header>
