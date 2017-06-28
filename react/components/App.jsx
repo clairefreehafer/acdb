@@ -6,6 +6,7 @@ import Navigation from './Navigation';
 import Landing from './Landing';
 import Furniture from './lists/Furniture';
 import FurnitureDetailsNL from './details-pages/furniture/FurnitureDetailsNL';
+import FurnitureDetailsHHD from './details-pages/furniture/FurnitureDetailsHHD';
 import WallpaperDetailsNL from './details-pages/wallpaper/WallpaperDetailsNL';
 
 export default function App (props) {
@@ -15,8 +16,9 @@ export default function App (props) {
       <Col sm={10} smOffset={1} md={8} mdOffset={2} lg={6} lgOffset={3}>
         <Route exact path="/" component={Landing} />
         <Route path="/furniture" component={Furniture} />
-        <Route path="/blue-bed" component={FurnitureDetailsNL} />
-        <Route path="/blue-wall" component={WallpaperDetailsNL} />
+        <Route path="/blue-bed-nl" component={FurnitureDetailsNL} />
+        <Route path="/blue-bed-hhd" component={FurnitureDetailsHHD} />
+        <Route path="/blue-wall-nl" component={WallpaperDetailsNL} />
 		  </Col>
     </div>
   );

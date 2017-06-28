@@ -36,36 +36,22 @@ export default function (props) {
               </Col>
             </Row>
             <Row>
-              <Col sm={6}>
+              <Col sm={12}>
                 <h5>purchase price</h5>
                 <img src="images/sprites/nl/items/small-bells.png" /> 2,100
               </Col>
-              <Col sm={6}>
-                <h5>&nbsp;</h5>
-                <OverlayTrigger placement="top" overlay={bellBoom}>
-                  <img src="images/sprites/nl/items/big-bells.png" />
-                </OverlayTrigger>
-                  &nbsp;2,520
-              </Col>
             </Row>
             <Row>
-              <Col sm={6}>
+              <Col sm={12}>
                 <h5>resale value</h5>
                 <img src="images/sprites/nl/items/small-bells.png" /> 525
-              </Col>
-              <Col sm={6}>
-                <h5>&nbsp;</h5>
-                <OverlayTrigger placement="top" overlay={bellBoom}>
-                  <img src="images/sprites/nl/items/big-bells.png" />
-                </OverlayTrigger>
-                &nbsp;630
               </Col>
             </Row>
           </Col>
         </Row>
         <Row>
           <Col sm={12}>
-            <strong>obtained from</strong> <img src="images/sprites/nl/map/timmyandtommy.gif" /> Timmy & Tommy
+            <strong>obtained from</strong> Crazy Redd
           </Col>
         </Row>
         <Row>
@@ -74,39 +60,32 @@ export default function (props) {
           </Col>
         </Row>
         <Row>
-          <Col sm={3}>
-            <h5><strong>HHA theme(s)</strong></h5>
-            <Button bsSize="xsmall">rustic</Button>
+          <Col sm={4}>
+            <h5><strong>genre</strong></h5>
+            <Button bsSize="xsmall">trendy</Button>
+            <Button bsSize="xsmall">dignified</Button>
           </Col>
-          <Col sm={3}>
-            <h5>style</h5>
-            <Button bsSize="xsmall">basic</Button>
-          </Col>
-          <Col sm={3}>
+          <Col sm={4}>
             <h5>color(s)</h5>
             <Button bsSize="xsmall" id="blue">blue</Button>
             <Button bsSize="xsmall" id="yellow">yellow</Button>
           </Col>
-          <Col sm={3}>
+          <Col sm={4}>
             <h5>size</h5>
             <Button bsStyle="info" bsSize="xsmall" disabled>&nbsp;&nbsp;&nbsp;</Button>
             <Button bsStyle="info" bsSize="xsmall" disabled>&nbsp;&nbsp;&nbsp;</Button>
-
           </Col>
         </Row>
         <Row>
-          <Col sm={3}>
+          <Col sm={4}>
             <h5>furniture type</h5>
             bed
           </Col>
-          <Col sm={3}>
+          <Col sm={4}>
             <h5>interaction</h5>
             can be laid on by one
           </Col>
         </Row>
-
-        <Customization />
-
       </Panel>
     </div>
   )

@@ -18812,6 +18812,10 @@ var _FurnitureDetailsNL = __webpack_require__(489);
 
 var _FurnitureDetailsNL2 = _interopRequireDefault(_FurnitureDetailsNL);
 
+var _FurnitureDetailsHHD = __webpack_require__(491);
+
+var _FurnitureDetailsHHD2 = _interopRequireDefault(_FurnitureDetailsHHD);
+
 var _WallpaperDetailsNL = __webpack_require__(490);
 
 var _WallpaperDetailsNL2 = _interopRequireDefault(_WallpaperDetailsNL);
@@ -18828,8 +18832,9 @@ function App(props) {
       { sm: 10, smOffset: 1, md: 8, mdOffset: 2, lg: 6, lgOffset: 3 },
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Landing2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { path: '/furniture', component: _Furniture2.default }),
-      _react2.default.createElement(_reactRouterDom.Route, { path: '/blue-bed', component: _FurnitureDetailsNL2.default }),
-      _react2.default.createElement(_reactRouterDom.Route, { path: '/blue-wall', component: _WallpaperDetailsNL2.default })
+      _react2.default.createElement(_reactRouterDom.Route, { path: '/blue-bed-nl', component: _FurnitureDetailsNL2.default }),
+      _react2.default.createElement(_reactRouterDom.Route, { path: '/blue-bed-hhd', component: _FurnitureDetailsHHD2.default }),
+      _react2.default.createElement(_reactRouterDom.Route, { path: '/blue-wall-nl', component: _WallpaperDetailsNL2.default })
     )
   );
 }
@@ -18890,14 +18895,20 @@ function Landing(props) {
       _react2.default.createElement('br', null),
       _react2.default.createElement(
         _reactRouterDom.Link,
-        { to: '/blue-bed' },
-        'furniture page'
+        { to: '/blue-bed-nl' },
+        'furniture page (new leaf)'
       ),
       _react2.default.createElement('br', null),
       _react2.default.createElement(
         _reactRouterDom.Link,
-        { to: '/blue-wall' },
-        'wallpaper page'
+        { to: '/blue-bed-hhd' },
+        'furniture page (happy home designer)'
+      ),
+      _react2.default.createElement('br', null),
+      _react2.default.createElement(
+        _reactRouterDom.Link,
+        { to: '/blue-wall-nl' },
+        'wallpaper page (new leaf)'
       )
     )
   );
@@ -44711,7 +44722,7 @@ exports.default = function (props) {
         _react2.default.createElement(
           _reactBootstrap.Col,
           { sm: 3 },
-          _react2.default.createElement(_reactBootstrap.Thumbnail, { className: 'content-thumbnail', src: 'images/sprites/hhd/items/blue-bed.png' })
+          _react2.default.createElement(_reactBootstrap.Thumbnail, { className: 'details-thumbnail', src: 'images/sprites/hhd/items/blue-bed.png' })
         ),
         _react2.default.createElement(
           _reactBootstrap.Col,
@@ -44892,6 +44903,30 @@ exports.default = function (props) {
             { bsStyle: 'info', bsSize: 'xsmall', disabled: true },
             '\xA0\xA0\xA0'
           )
+        )
+      ),
+      _react2.default.createElement(
+        _reactBootstrap.Row,
+        null,
+        _react2.default.createElement(
+          _reactBootstrap.Col,
+          { sm: 3 },
+          _react2.default.createElement(
+            'h5',
+            null,
+            'furniture type'
+          ),
+          'bed'
+        ),
+        _react2.default.createElement(
+          _reactBootstrap.Col,
+          { sm: 3 },
+          _react2.default.createElement(
+            'h5',
+            null,
+            'interaction'
+          ),
+          'can be laid on by one'
         )
       ),
       _react2.default.createElement(_Customization2.default, null)
@@ -45207,6 +45242,167 @@ var WallpaperDetailsNL = function (_Component) {
 }(_react.Component);
 
 exports.default = WallpaperDetailsNL;
+
+/***/ }),
+/* 491 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (props) {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(
+      _reactBootstrap.PageHeader,
+      null,
+      'blue bed'
+    ),
+    _react2.default.createElement(_GameSelect2.default, null),
+    _react2.default.createElement(
+      _reactBootstrap.Panel,
+      null,
+      _react2.default.createElement(
+        _reactBootstrap.Row,
+        null,
+        _react2.default.createElement(
+          _reactBootstrap.Col,
+          { sm: 3 },
+          _react2.default.createElement(_reactBootstrap.Thumbnail, { className: 'details-thumbnail', src: 'images/sprites/hhd/items/blue-bed.png' })
+        ),
+        _react2.default.createElement(
+          _reactBootstrap.Col,
+          { sm: 9 },
+          _react2.default.createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { sm: 6 },
+              _react2.default.createElement(
+                'h5',
+                null,
+                'unlocked by'
+              ),
+              _react2.default.createElement(
+                _reactBootstrap.OverlayTrigger,
+                { placement: 'bottom', overlay: obtainedFrom },
+                _react2.default.createElement('img', { src: 'images/sprites/hhd/chars/jeremiah.png' })
+              )
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { sm: 6 },
+              _react2.default.createElement(
+                'h5',
+                null,
+                'furniture type'
+              ),
+              'home items',
+              _react2.default.createElement('br', null),
+              'furniture',
+              _react2.default.createElement('br', null),
+              'beds'
+            )
+          )
+        )
+      ),
+      _react2.default.createElement(
+        _reactBootstrap.Row,
+        null,
+        _react2.default.createElement(
+          _reactBootstrap.Col,
+          { sm: 12 },
+          _react2.default.createElement(
+            'h4',
+            null,
+            'properties'
+          )
+        )
+      ),
+      _react2.default.createElement(
+        _reactBootstrap.Row,
+        null,
+        _react2.default.createElement(
+          _reactBootstrap.Col,
+          { sm: 4 },
+          _react2.default.createElement(
+            'h5',
+            null,
+            'color'
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Button,
+            { bsSize: 'xsmall', id: 'blue' },
+            'blue'
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Button,
+            { bsSize: 'xsmall', id: 'yellow' },
+            'yellow'
+          )
+        ),
+        _react2.default.createElement(
+          _reactBootstrap.Col,
+          { sm: 4 },
+          _react2.default.createElement(
+            'h5',
+            null,
+            'size'
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Button,
+            { bsStyle: 'info', bsSize: 'xsmall', disabled: true },
+            '\xA0\xA0\xA0'
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Button,
+            { bsStyle: 'info', bsSize: 'xsmall', disabled: true },
+            '\xA0\xA0\xA0'
+          )
+        ),
+        _react2.default.createElement(
+          _reactBootstrap.Col,
+          { sm: 4 },
+          _react2.default.createElement(
+            'h5',
+            null,
+            'interaction'
+          ),
+          'can be laid on by one'
+        )
+      ),
+      _react2.default.createElement(_Customization2.default, null)
+    )
+  );
+};
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactBootstrap = __webpack_require__(40);
+
+var _GameSelect = __webpack_require__(488);
+
+var _GameSelect2 = _interopRequireDefault(_GameSelect);
+
+var _Customization = __webpack_require__(484);
+
+var _Customization2 = _interopRequireDefault(_Customization);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var obtainedFrom = _react2.default.createElement(
+  _reactBootstrap.Tooltip,
+  null,
+  'jeremiah'
+);
 
 /***/ })
 /******/ ]);

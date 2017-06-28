@@ -10,12 +10,12 @@ module.exports = app
   .use(bodyParser.json())
 
   // serve static files
-  .use(express.static(resolve(__dirname, '..', 'public')))
+  .use(express.static(resolve(__dirname, 'public')))
 
   // serve api
   //.use('/api', require('./api'))
 
-  .get('/*', (_, res) => res.sendFile(resolve(__dirname, '..', 'public', 'index.html')))
+  .get('/*', (_, res) => res.sendFile(resolve(__dirname, 'public', 'index.html')))
 
   // error handling middleware
   .use((err, req, res, next) => {

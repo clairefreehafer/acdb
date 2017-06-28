@@ -13,7 +13,7 @@
     "build": "webpack",
     "build-watch": "npm run build -- -w",
     "start": "node index.js",
-    "start-watch": "nodemon server/index.js --watch api --watch js"
+    "start-watch": "nodemon server/index.js --watch index.js --watch js"
   },
   "dependencies": {
     "airtable": "^0.5.0",
