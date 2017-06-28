@@ -2,7 +2,7 @@
   "name": "acdb",
   "version": "1.0.0",
   "description": "animal crossing database",
-  "main": "server/index.js",
+  "main": "index.js",
   "repository": "https://github.com/clairefreehafer/acdb.git",
   "author": "Claire Freehafer <claire.freehafer@gmail.com>",
   "license": "MIT",
@@ -12,8 +12,8 @@
   "scripts": {
     "build": "webpack",
     "build-watch": "npm run build -- -w",
-    "start": "node server/index.js",
-    "start-watch": "nodemon server/index.js --watch server --watch js"
+    "start": "node index.js",
+    "start-watch": "nodemon server/index.js --watch api --watch js"
   },
   "dependencies": {
     "airtable": "^0.5.0",
