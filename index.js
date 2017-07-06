@@ -13,7 +13,7 @@ module.exports = app
   .use(express.static(resolve(__dirname, 'public')))
 
   // serve api
-  //.use('/api', require('./api'))
+  .use('/api', require('./api'))
 
   .get('/*', (_, res) => res.sendFile(resolve(__dirname, 'public', 'index.html')))
 
