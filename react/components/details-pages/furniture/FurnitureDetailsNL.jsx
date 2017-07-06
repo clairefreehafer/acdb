@@ -7,11 +7,11 @@ import Customization from './Customization';
 
 /* put in own file */
 const reorderable = (
-  <Tooltip>reorderable</Tooltip>
+  <Tooltip id="reorderable">reorderable</Tooltip>
 );
 
 const bellBoom = (
-  <Tooltip>with bell boom ordinance</Tooltip>
+  <Tooltip id="bell boom">with bell boom ordinance</Tooltip>
 );
 /* *************** */
 

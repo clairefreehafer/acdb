@@ -11117,7 +11117,6 @@ var Customization = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      console.log(this.state.customization);
       var customization = this.state.customization;
 
       return _react2.default.createElement(
@@ -11239,7 +11238,7 @@ var Customization = function (_Component) {
                   ),
                   customization['Options 1'] ? this.renderOptions(customization['Options 1']) : null
                 ),
-                customization['Feature 2'] ? _react2.default.createElement(
+                customization['Feature 2'] && customization['Feature 2'] !== 'n/a' ? _react2.default.createElement(
                   'tr',
                   null,
                   _react2.default.createElement(
@@ -19204,18 +19203,6 @@ function Landing(props) {
       ),
       _react2.default.createElement(
         _reactRouterDom.Link,
-        { to: '/furniture' },
-        'list of furniture'
-      ),
-      _react2.default.createElement('br', null),
-      _react2.default.createElement(
-        _reactRouterDom.Link,
-        { to: '/blue-bed-nl' },
-        'furniture page (new leaf)'
-      ),
-      _react2.default.createElement('br', null),
-      _react2.default.createElement(
-        _reactRouterDom.Link,
         { to: '/blue-bed-hhd' },
         'furniture page (happy home designer)'
       ),
@@ -19653,13 +19640,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 /* put in own file */
 var reorderable = _react2.default.createElement(
   _reactBootstrap.Tooltip,
-  null,
+  { id: 'reorderable' },
   'reorderable'
 );
 
 var bellBoom = _react2.default.createElement(
   _reactBootstrap.Tooltip,
-  null,
+  { id: 'bell boom' },
   'with bell boom ordinance'
 );
 /* *************** */

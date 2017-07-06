@@ -50,7 +50,6 @@ export default class Customization extends Component {
   }
 
   render () {
-    console.log(this.state.customization)
     let customization = this.state.customization;
 
     return (
@@ -103,7 +102,7 @@ export default class Customization extends Component {
                 </tr>
 
                 {/* second customization */}
-                {customization['Feature 2'] ?
+                {customization['Feature 2'] && customization['Feature 2'] !== 'n/a' ?
                   <tr>
                     {/* feature */}
                     <td>{customization['Feature 2']}</td>
