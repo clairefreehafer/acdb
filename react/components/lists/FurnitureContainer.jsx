@@ -10,13 +10,12 @@ export default class FurnitureContainer extends Component {
   }
 
   render () {
-    console.log('poop',this.props)
     return (
       <div>
         {/* list of furniture */}
-        <Route exact path="/" component={Furniture} />
+        <Route exact path="/furniture" component={Furniture} />
         {/* individual furniture */}
-        <Route path="/:id" component={FurnitureDetailsNL} />
+        <Route exact path="/furniture/:id" component={FurnitureDetailsNL} />
       </div>
     )
   }

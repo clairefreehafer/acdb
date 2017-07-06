@@ -5,7 +5,7 @@ import GameSelect from '../GameSelect';
 import Customization from './Customization';
 
 export default function FurnitureDetailsNL (props) {
-  console.log(props)
+  console.log('test', props)
   return (
     <div>
       test

@@ -19600,7 +19600,7 @@ var _Customization2 = _interopRequireDefault(_Customization);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function FurnitureDetailsNL(props) {
-  console.log(props);
+  console.log('test', props);
   return _react2.default.createElement(
     'div',
     null,
@@ -47049,12 +47049,11 @@ var FurnitureContainer = function (_Component) {
   _createClass(FurnitureContainer, [{
     key: 'render',
     value: function render() {
-      console.log('poop', this.props);
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Furniture2.default }),
-        _react2.default.createElement(_reactRouterDom.Route, { path: '/:id', component: _FurnitureDetailsNL2.default })
+        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/furniture', component: _Furniture2.default }),
+        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/furniture/:id', component: _FurnitureDetailsNL2.default })
       );
     }
   }]);
