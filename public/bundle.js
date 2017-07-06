@@ -11037,6 +11037,10 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _axios = __webpack_require__(493);
+
+var _axios2 = _interopRequireDefault(_axios);
+
 var _reactBootstrap = __webpack_require__(29);
 
 var _CustomizedImages = __webpack_require__(218);
@@ -11060,6 +11064,7 @@ var Customization = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Customization.__proto__ || Object.getPrototypeOf(Customization)).call(this));
 
     _this.state = {
+      customization: {},
       showImages: false
     };
 
@@ -11069,6 +11074,15 @@ var Customization = function (_Component) {
   }
 
   _createClass(Customization, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      var _this2 = this;
+
+      _axios2.default.get('/api/furniture/customization/' + this.props.id).then(function (res) {
+        return _this2.setState({ customization: res.data.fields });
+      }).catch(console.error);
+    }
+  }, {
     key: 'openModal',
     value: function openModal() {
       this.setState({
@@ -11085,6 +11099,7 @@ var Customization = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
+      console.log(this.state);
       return _react2.default.createElement(
         'div',
         null,
@@ -11121,7 +11136,7 @@ var Customization = function (_Component) {
               null,
               'fee to change'
             ),
-            _react2.default.createElement('img', { src: 'images/sprites/nl/items/small-bells.png' }),
+            _react2.default.createElement('img', { src: '/images/sprites/nl/items/small-bells.png' }),
             ' 210'
           ),
           _react2.default.createElement(
@@ -11132,7 +11147,7 @@ var Customization = function (_Component) {
               null,
               'fee to revert'
             ),
-            _react2.default.createElement('img', { src: 'images/sprites/nl/items/small-bells.png' }),
+            _react2.default.createElement('img', { src: '/images/sprites/nl/items/small-bells.png' }),
             ' 105'
           )
         ),
@@ -19643,7 +19658,6 @@ var FurnitureDetailsNL = function (_React$Component) {
     value: function componentWillMount() {
       var _this2 = this;
 
-      console.log('test');
       _axios2.default.get('/api/furniture/' + this.props.match.params.id).then(function (res) {
         return _this2.setState({ item: res.data.fields });
       }).catch(console.error);
@@ -19661,13 +19675,12 @@ var FurnitureDetailsNL = function (_React$Component) {
     key: 'renderCustomization',
     value: function renderCustomization(id) {
       if (id !== 'recFAP23T001F4nC3') {
-        return _react2.default.createElement(_Customization2.default, null);
+        return _react2.default.createElement(_Customization2.default, { id: id });
       }
     }
   }, {
     key: 'render',
     value: function render() {
-      console.log(this.state.item);
       var item = this.state.item;
 
       return _react2.default.createElement(
@@ -19678,7 +19691,7 @@ var FurnitureDetailsNL = function (_React$Component) {
           null,
           item.Name,
           '\xA0',
-          this.state.item.Reorderable ? _react2.default.createElement(
+          this.state.item['Reorderable?'] ? _react2.default.createElement(
             _reactBootstrap.OverlayTrigger,
             { placement: 'bottom', overlay: reorderable },
             _react2.default.createElement('img', { src: '/images/sprites/nl/items/red-present-unopened.png' })

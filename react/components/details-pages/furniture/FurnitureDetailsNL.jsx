@@ -25,7 +25,6 @@ export default class FurnitureDetailsNL extends React.Component {
   }
 
   componentWillMount () {
-    console.log('test')
     axios.get(`/api/furniture/${this.props.match.params.id}`)
       .then(res => this.setState({ item: res.data.fields }))
       .catch(console.error)
@@ -45,19 +44,18 @@ export default class FurnitureDetailsNL extends React.Component {
 
   renderCustomization (id) {
     if (id !== 'recFAP23T001F4nC3') {
-      return <Customization />
+      return <Customization id={id} />
     }
   }
 
   render () {
-    console.log(this.state.item)
     let item = this.state.item;
 
     return (
       <div>
         <PageHeader>
           {item.Name}&nbsp;
-          {this.state.item.Reorderable ?
+          {this.state.item['Reorderable?'] ?
           <OverlayTrigger placement="bottom" overlay={reorderable}>
             <img src="/images/sprites/nl/items/red-present-unopened.png" />
           </OverlayTrigger>

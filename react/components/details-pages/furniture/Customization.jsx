@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 import { Button, Col, Row, Table } from 'react-bootstrap';
 
@@ -9,11 +10,18 @@ export default class Customization extends Component {
     super();
 
     this.state = {
+      customization: {},
       showImages: false
     };
 
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+  }
+
+  componentWillMount () {
+    axios.get(`/api/furniture/customization/${this.props.id}`)
+      .then(res => (this.setState({ customization: res.data.fields })))
+      .catch(console.error)
   }
 
   openModal () {
@@ -29,6 +37,7 @@ export default class Customization extends Component {
   }
 
   render () {
+    console.log(this.state)
     return (
       <div>
         <Row>
@@ -43,12 +52,12 @@ export default class Customization extends Component {
           </Col>
           <Col sm={4}>
             <h5>fee to change</h5>
-            <img src="images/sprites/nl/items/small-bells.png" /> 210
+            <img src="/images/sprites/nl/items/small-bells.png" /> 210
           </Col>
 
           <Col sm={4}>
             <h5>fee to revert</h5>
-            <img src="images/sprites/nl/items/small-bells.png" /> 105
+            <img src="/images/sprites/nl/items/small-bells.png" /> 105
           </Col>
         </Row>
 

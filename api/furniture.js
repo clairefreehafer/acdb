@@ -43,4 +43,14 @@ router.get('/:id', (req, res, next) => {
     res.send(record);
   });
 })
+
+/***********************************/
+/********** CUSTOMIZATION **********/
+/***********************************/
+router.get('/customization/:id', (req, res, next) => {
+  base('Furniture Customization').find(req.params.id, function(err, record) {
+    if (err) { console.error(err); return; }
+    res.send(record);
+  });
+})
 module.exports = router;
