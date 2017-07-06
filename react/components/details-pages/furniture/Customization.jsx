@@ -24,6 +24,19 @@ export default class Customization extends Component {
       .catch(console.error)
   }
 
+  renderOptions (options) {
+    if (options !== 'n/a') {
+      let optionsArray = options.split(', ');
+      return (
+        <td>
+          {optionsArray.map(option => {
+            return <div key={option}>{option}</div>
+          })}
+        </td>
+      )
+    } else return null;
+  }
+
   openModal () {
     this.setState({
       showImages: true
@@ -75,11 +88,8 @@ export default class Customization extends Component {
                 <tr>
                   <td>wood color</td>
                   <td>blue</td>
-                  <td>
-                    light blue<br />
-                    dark blue<br />
-                    <img src="images/sprites/nl/items/sapphire.png" /> sapphire
-                  </td>
+                  {this.state.customization['Options 1'] ? this.renderOptions(this.state.customization['Options 1'])
+                : null}
                 </tr>
                 <tr>
                   <td>bedding</td>

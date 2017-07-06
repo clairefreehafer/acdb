@@ -11083,6 +11083,24 @@ var Customization = function (_Component) {
       }).catch(console.error);
     }
   }, {
+    key: 'renderOptions',
+    value: function renderOptions(options) {
+      if (options !== 'n/a') {
+        var optionsArray = options.split(', ');
+        return _react2.default.createElement(
+          'td',
+          null,
+          optionsArray.map(function (option) {
+            return _react2.default.createElement(
+              'div',
+              { key: option },
+              option
+            );
+          })
+        );
+      } else return null;
+    }
+  }, {
     key: 'openModal',
     value: function openModal() {
       this.setState({
@@ -11199,16 +11217,7 @@ var Customization = function (_Component) {
                     null,
                     'blue'
                   ),
-                  _react2.default.createElement(
-                    'td',
-                    null,
-                    'light blue',
-                    _react2.default.createElement('br', null),
-                    'dark blue',
-                    _react2.default.createElement('br', null),
-                    _react2.default.createElement('img', { src: 'images/sprites/nl/items/sapphire.png' }),
-                    ' sapphire'
-                  )
+                  this.state.customization['Options 1'] ? this.renderOptions(this.state.customization['Options 1']) : null
                 ),
                 _react2.default.createElement(
                   'tr',
