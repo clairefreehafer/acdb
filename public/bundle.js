@@ -19082,9 +19082,9 @@ var _Landing = __webpack_require__(216);
 
 var _Landing2 = _interopRequireDefault(_Landing);
 
-var _Furniture = __webpack_require__(222);
+var _FurnitureContainer = __webpack_require__(516);
 
-var _Furniture2 = _interopRequireDefault(_Furniture);
+var _FurnitureContainer2 = _interopRequireDefault(_FurnitureContainer);
 
 var _FurnitureDetailsNL = __webpack_require__(220);
 
@@ -19109,7 +19109,7 @@ function App(props) {
       _reactBootstrap.Col,
       { sm: 10, smOffset: 1, md: 8, mdOffset: 2, lg: 6, lgOffset: 3 },
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Landing2.default }),
-      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/furniture', component: _Furniture2.default }),
+      _react2.default.createElement(_reactRouterDom.Route, { path: '/furniture', component: _FurnitureContainer2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { path: '/blue-bed-nl', component: _FurnitureDetailsNL2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { path: '/blue-bed-hhd', component: _FurnitureDetailsHHD2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { path: '/blue-wall-nl', component: _WallpaperDetailsNL2.default })
@@ -19219,6 +19219,19 @@ exports.default = function (props) {
       _react2.default.createElement(_reactBootstrap.Navbar.Toggle, null)
     ),
     _react2.default.createElement(
+      _reactBootstrap.Nav,
+      null,
+      _react2.default.createElement(
+        _reactRouterBootstrap.LinkContainer,
+        { to: '/furniture' },
+        _react2.default.createElement(
+          _reactBootstrap.NavItem,
+          { eventKey: 1 },
+          'furniture'
+        )
+      )
+    ),
+    _react2.default.createElement(
       _reactBootstrap.Navbar.Collapse,
       null,
       _react2.default.createElement(
@@ -19226,11 +19239,11 @@ exports.default = function (props) {
         { pullRight: true },
         _react2.default.createElement(
           _reactBootstrap.NavDropdown,
-          { eventKey: 1, title: 'quick links', id: 'quick-links' },
+          { eventKey: 2, title: 'quick links', id: 'quick-links' },
           _react2.default.createElement(
             _reactBootstrap.MenuItem,
-            { eventKey: 1.1 },
-            'new leaf'
+            { eventKey: 2.1 },
+            'dummy link'
           )
         )
       )
@@ -19245,6 +19258,8 @@ var _react2 = _interopRequireDefault(_react);
 var _reactRouterDom = __webpack_require__(54);
 
 var _reactBootstrap = __webpack_require__(29);
+
+var _reactRouterBootstrap = __webpack_require__(515);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19566,242 +19581,7 @@ var obtainedFrom = _react2.default.createElement(
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-exports.default = function (props) {
-  return _react2.default.createElement(
-    'div',
-    null,
-    _react2.default.createElement(
-      _reactBootstrap.PageHeader,
-      null,
-      'blue bed\xA0',
-      _react2.default.createElement(
-        _reactBootstrap.OverlayTrigger,
-        { placement: 'bottom', overlay: reorderable },
-        _react2.default.createElement('img', { src: 'images/sprites/nl/items/red-present-unopened.png' })
-      )
-    ),
-    _react2.default.createElement(_GameSelect2.default, null),
-    _react2.default.createElement(
-      _reactBootstrap.Panel,
-      null,
-      _react2.default.createElement(
-        _reactBootstrap.Row,
-        null,
-        _react2.default.createElement(
-          _reactBootstrap.Col,
-          { sm: 3 },
-          _react2.default.createElement(_reactBootstrap.Thumbnail, { className: 'details-thumbnail', src: 'images/sprites/hhd/items/blue-bed.png' })
-        ),
-        _react2.default.createElement(
-          _reactBootstrap.Col,
-          { sm: 9 },
-          _react2.default.createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2.default.createElement(
-              _reactBootstrap.Col,
-              { sm: 12 },
-              _react2.default.createElement(
-                'h4',
-                { className: 'set' },
-                'blue series'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2.default.createElement(
-              _reactBootstrap.Col,
-              { sm: 6 },
-              _react2.default.createElement(
-                'h5',
-                null,
-                'purchase price'
-              ),
-              _react2.default.createElement('img', { src: 'images/sprites/nl/items/small-bells.png' }),
-              ' 2,100'
-            ),
-            _react2.default.createElement(
-              _reactBootstrap.Col,
-              { sm: 6 },
-              _react2.default.createElement(
-                'h5',
-                null,
-                '\xA0'
-              ),
-              _react2.default.createElement(
-                _reactBootstrap.OverlayTrigger,
-                { placement: 'top', overlay: bellBoom },
-                _react2.default.createElement('img', { src: 'images/sprites/nl/items/big-bells.png' })
-              ),
-              '\xA02,520'
-            )
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Row,
-            null,
-            _react2.default.createElement(
-              _reactBootstrap.Col,
-              { sm: 6 },
-              _react2.default.createElement(
-                'h5',
-                null,
-                'resale value'
-              ),
-              _react2.default.createElement('img', { src: 'images/sprites/nl/items/small-bells.png' }),
-              ' 525'
-            ),
-            _react2.default.createElement(
-              _reactBootstrap.Col,
-              { sm: 6 },
-              _react2.default.createElement(
-                'h5',
-                null,
-                '\xA0'
-              ),
-              _react2.default.createElement(
-                _reactBootstrap.OverlayTrigger,
-                { placement: 'top', overlay: bellBoom },
-                _react2.default.createElement('img', { src: 'images/sprites/nl/items/big-bells.png' })
-              ),
-              '\xA0630'
-            )
-          )
-        )
-      ),
-      _react2.default.createElement(
-        _reactBootstrap.Row,
-        null,
-        _react2.default.createElement(
-          _reactBootstrap.Col,
-          { sm: 12 },
-          _react2.default.createElement(
-            'strong',
-            null,
-            'obtained from'
-          ),
-          ' ',
-          _react2.default.createElement('img', { src: 'images/sprites/nl/map/timmyandtommy.gif' }),
-          ' Timmy & Tommy'
-        )
-      ),
-      _react2.default.createElement(
-        _reactBootstrap.Row,
-        null,
-        _react2.default.createElement(
-          _reactBootstrap.Col,
-          { sm: 12 },
-          _react2.default.createElement(
-            'h4',
-            null,
-            'properties'
-          )
-        )
-      ),
-      _react2.default.createElement(
-        _reactBootstrap.Row,
-        null,
-        _react2.default.createElement(
-          _reactBootstrap.Col,
-          { sm: 3 },
-          _react2.default.createElement(
-            'h5',
-            null,
-            _react2.default.createElement(
-              'strong',
-              null,
-              'HHA theme(s)'
-            )
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Button,
-            { bsSize: 'xsmall' },
-            'rustic'
-          )
-        ),
-        _react2.default.createElement(
-          _reactBootstrap.Col,
-          { sm: 3 },
-          _react2.default.createElement(
-            'h5',
-            null,
-            'style'
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Button,
-            { bsSize: 'xsmall' },
-            'basic'
-          )
-        ),
-        _react2.default.createElement(
-          _reactBootstrap.Col,
-          { sm: 3 },
-          _react2.default.createElement(
-            'h5',
-            null,
-            'color(s)'
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Button,
-            { bsSize: 'xsmall', id: 'blue' },
-            'blue'
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Button,
-            { bsSize: 'xsmall', id: 'yellow' },
-            'yellow'
-          )
-        ),
-        _react2.default.createElement(
-          _reactBootstrap.Col,
-          { sm: 3 },
-          _react2.default.createElement(
-            'h5',
-            null,
-            'size'
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Button,
-            { bsStyle: 'info', bsSize: 'xsmall', disabled: true },
-            '\xA0\xA0\xA0'
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Button,
-            { bsStyle: 'info', bsSize: 'xsmall', disabled: true },
-            '\xA0\xA0\xA0'
-          )
-        )
-      ),
-      _react2.default.createElement(
-        _reactBootstrap.Row,
-        null,
-        _react2.default.createElement(
-          _reactBootstrap.Col,
-          { sm: 3 },
-          _react2.default.createElement(
-            'h5',
-            null,
-            'furniture type'
-          ),
-          'bed'
-        ),
-        _react2.default.createElement(
-          _reactBootstrap.Col,
-          { sm: 3 },
-          _react2.default.createElement(
-            'h5',
-            null,
-            'interaction'
-          ),
-          'can be laid on by one'
-        )
-      ),
-      _react2.default.createElement(_Customization2.default, null)
-    )
-  );
-};
+exports.default = FurnitureDetailsNL;
 
 var _react = __webpack_require__(0);
 
@@ -19819,17 +19599,14 @@ var _Customization2 = _interopRequireDefault(_Customization);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var reorderable = _react2.default.createElement(
-  _reactBootstrap.Tooltip,
-  null,
-  'reorderable'
-);
-
-var bellBoom = _react2.default.createElement(
-  _reactBootstrap.Tooltip,
-  null,
-  'with bell boom ordinance'
-);
+function FurnitureDetailsNL(props) {
+  console.log(props);
+  return _react2.default.createElement(
+    'div',
+    null,
+    'test'
+  );
+}
 
 /***/ }),
 /* 221 */
@@ -46995,6 +46772,297 @@ function isSlowBuffer (obj) {
   return typeof obj.readFloatLE === 'function' && typeof obj.slice === 'function' && isBuffer(obj.slice(0, 0))
 }
 
+
+/***/ }),
+/* 513 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(7);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactRouterDom = __webpack_require__(54);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var isModifiedEvent = function isModifiedEvent(event) {
+  return !!(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey);
+};
+
+var LinkContainer = function (_Component) {
+  _inherits(LinkContainer, _Component);
+
+  function LinkContainer() {
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, LinkContainer);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.handleClick = function (event) {
+      var _this$props = _this.props,
+          children = _this$props.children,
+          onClick = _this$props.onClick;
+
+
+      if (children.props.onClick) {
+        children.props.onClick(event);
+      }
+
+      if (onClick) {
+        onClick(event);
+      }
+
+      if (!event.defaultPrevented && // onClick prevented default
+      event.button === 0 && // ignore right clicks
+      !isModifiedEvent(event) // ignore clicks with modifier keys
+      ) {
+          event.preventDefault();
+
+          var history = _this.context.router.history;
+          var _this$props2 = _this.props,
+              replace = _this$props2.replace,
+              to = _this$props2.to;
+
+
+          if (replace) {
+            history.replace(to);
+          } else {
+            history.push(to);
+          }
+        }
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  LinkContainer.prototype.render = function render() {
+    var _this2 = this;
+
+    var _props = this.props,
+        _children = _props.children,
+        replace = _props.replace,
+        to = _props.to,
+        exact = _props.exact,
+        strict = _props.strict,
+        activeClassName = _props.activeClassName,
+        className = _props.className,
+        activeStyle = _props.activeStyle,
+        style = _props.style,
+        getIsActive = _props.isActive,
+        props = _objectWithoutProperties(_props, ['children', 'replace', 'to', 'exact', 'strict', 'activeClassName', 'className', 'activeStyle', 'style', 'isActive']);
+
+    var href = this.context.router.history.createHref(typeof to === 'string' ? { pathname: to } : to);
+
+    return _react2.default.createElement(_reactRouterDom.Route, {
+      path: (typeof to === 'undefined' ? 'undefined' : _typeof(to)) === 'object' ? to.pathname : to,
+      exact: exact,
+      strict: strict,
+      children: function children(_ref) {
+        var location = _ref.location,
+            match = _ref.match;
+
+        var isActive = !!(getIsActive ? getIsActive(match, location) : match);
+
+        return _react2.default.cloneElement(_react2.default.Children.only(_children), _extends({}, props, {
+          className: isActive ? [className, activeClassName].join(' ') : className,
+          style: isActive ? _extends({}, style, activeStyle) : style,
+          href: href,
+          onClick: _this2.handleClick
+        }));
+      }
+    });
+  };
+
+  return LinkContainer;
+}(_react.Component);
+
+LinkContainer.contextTypes = {
+  router: _propTypes2.default.shape({
+    history: _propTypes2.default.shape({
+      push: _propTypes2.default.func.isRequired,
+      replace: _propTypes2.default.func.isRequired,
+      createHref: _propTypes2.default.func.isRequired
+    }).isRequired
+  }).isRequired
+};
+LinkContainer.propTypes = {
+  children: _propTypes2.default.element.isRequired,
+  onClick: _propTypes2.default.func,
+  replace: _propTypes2.default.bool,
+  to: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.object]).isRequired,
+  exact: _propTypes2.default.bool,
+  strict: _propTypes2.default.bool,
+  className: _propTypes2.default.string,
+  activeClassName: _propTypes2.default.string,
+  style: _propTypes2.default.object,
+  activeStyle: _propTypes2.default.object,
+  isActive: _propTypes2.default.func
+};
+LinkContainer.defaultProps = {
+  replace: false,
+  exact: false,
+  strict: false,
+  activeClassName: 'active'
+};
+exports.default = LinkContainer;
+module.exports = exports['default'];
+
+/***/ }),
+/* 514 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _LinkContainer = __webpack_require__(513);
+
+var _LinkContainer2 = _interopRequireDefault(_LinkContainer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// Don't use a stateless function, to allow users to set a ref.
+/* eslint-disable react/prefer-stateless-function */
+var IndexLinkContainer = function (_React$Component) {
+  _inherits(IndexLinkContainer, _React$Component);
+
+  function IndexLinkContainer() {
+    _classCallCheck(this, IndexLinkContainer);
+
+    return _possibleConstructorReturn(this, _React$Component.apply(this, arguments));
+  }
+
+  IndexLinkContainer.prototype.render = function render() {
+    return _react2.default.createElement(_LinkContainer2.default, _extends({}, this.props, { exact: true }));
+  };
+
+  return IndexLinkContainer;
+}(_react2.default.Component);
+/* eslint-enable react/prefer-stateless-function */
+
+
+exports.default = IndexLinkContainer;
+module.exports = exports['default'];
+
+/***/ }),
+/* 515 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+exports.LinkContainer = exports.IndexLinkContainer = undefined;
+
+var _IndexLinkContainer2 = __webpack_require__(514);
+
+var _IndexLinkContainer3 = _interopRequireDefault(_IndexLinkContainer2);
+
+var _LinkContainer2 = __webpack_require__(513);
+
+var _LinkContainer3 = _interopRequireDefault(_LinkContainer2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.IndexLinkContainer = _IndexLinkContainer3.default;
+exports.LinkContainer = _LinkContainer3.default;
+
+/***/ }),
+/* 516 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(54);
+
+var _Furniture = __webpack_require__(222);
+
+var _Furniture2 = _interopRequireDefault(_Furniture);
+
+var _FurnitureDetailsNL = __webpack_require__(220);
+
+var _FurnitureDetailsNL2 = _interopRequireDefault(_FurnitureDetailsNL);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var FurnitureContainer = function (_Component) {
+  _inherits(FurnitureContainer, _Component);
+
+  function FurnitureContainer(props) {
+    _classCallCheck(this, FurnitureContainer);
+
+    return _possibleConstructorReturn(this, (FurnitureContainer.__proto__ || Object.getPrototypeOf(FurnitureContainer)).call(this));
+  }
+
+  _createClass(FurnitureContainer, [{
+    key: 'render',
+    value: function render() {
+      console.log('poop', this.props);
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Furniture2.default }),
+        _react2.default.createElement(_reactRouterDom.Route, { path: '/:id', component: _FurnitureDetailsNL2.default })
+      );
+    }
+  }]);
+
+  return FurnitureContainer;
+}(_react.Component);
+
+exports.default = FurnitureContainer;
 
 /***/ })
 /******/ ]);
