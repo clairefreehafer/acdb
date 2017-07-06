@@ -23,7 +23,6 @@ export default class Furniture extends Component {
   }
 
   render () {
-    console.log(this.state)
     return (
       <div>
         <PageHeader>furniture</PageHeader>

@@ -19610,6 +19610,20 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+/* put in own file */
+var reorderable = _react2.default.createElement(
+  _reactBootstrap.Tooltip,
+  null,
+  'reorderable'
+);
+
+var bellBoom = _react2.default.createElement(
+  _reactBootstrap.Tooltip,
+  null,
+  'with bell boom ordinance'
+);
+/* *************** */
+
 var FurnitureDetailsNL = function (_React$Component) {
   _inherits(FurnitureDetailsNL, _React$Component);
 
@@ -19635,14 +19649,263 @@ var FurnitureDetailsNL = function (_React$Component) {
       }).catch(console.error);
     }
   }, {
+    key: 'renderFurnitureSize',
+    value: function renderFurnitureSize(size) {}
+  }, {
+    key: 'renderFurnitureType',
+    value: function renderFurnitureType(info) {}
+  }, {
+    key: 'renderFurnitureInteraction',
+    value: function renderFurnitureInteraction(info) {}
+  }, {
+    key: 'renderCustomization',
+    value: function renderCustomization(id) {
+      if (id !== 'recFAP23T001F4nC3') {
+        return _react2.default.createElement(_Customization2.default, null);
+      }
+    }
+  }, {
     key: 'render',
     value: function render() {
-      // this.props.match.params.id
-      console.log(this.state);
+      console.log(this.state.item);
+      var item = this.state.item;
+
       return _react2.default.createElement(
         'div',
         null,
-        'test'
+        _react2.default.createElement(
+          _reactBootstrap.PageHeader,
+          null,
+          item.Name,
+          '\xA0',
+          this.state.item.Reorderable ? _react2.default.createElement(
+            _reactBootstrap.OverlayTrigger,
+            { placement: 'bottom', overlay: reorderable },
+            _react2.default.createElement('img', { src: '/images/sprites/nl/items/red-present-unopened.png' })
+          ) : null
+        ),
+        _react2.default.createElement(_GameSelect2.default, null),
+        ' ',
+        _react2.default.createElement(
+          _reactBootstrap.Panel,
+          null,
+          _react2.default.createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { sm: 3 },
+              item.Image ? _react2.default.createElement(_reactBootstrap.Thumbnail, { className: 'details-thumbnail', src: item.Image[0].url }) : null
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { sm: 9 },
+              _react2.default.createElement(
+                _reactBootstrap.Row,
+                null,
+                _react2.default.createElement(
+                  _reactBootstrap.Col,
+                  { sm: 12 },
+                  _react2.default.createElement(
+                    'h4',
+                    { className: 'set' },
+                    item['Series/Set/Theme/Category']
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                _reactBootstrap.Row,
+                null,
+                _react2.default.createElement(
+                  _reactBootstrap.Col,
+                  { sm: 6 },
+                  _react2.default.createElement(
+                    'h5',
+                    null,
+                    'purchase price'
+                  ),
+                  _react2.default.createElement('img', { src: '/images/sprites/nl/items/small-bells.png' }),
+                  ' ',
+                  item['Purchase Price']
+                ),
+                _react2.default.createElement(
+                  _reactBootstrap.Col,
+                  { sm: 6 },
+                  _react2.default.createElement(
+                    'h5',
+                    null,
+                    '\xA0'
+                  ),
+                  _react2.default.createElement(
+                    _reactBootstrap.OverlayTrigger,
+                    { placement: 'top', overlay: bellBoom },
+                    _react2.default.createElement('img', { src: '/images/sprites/nl/items/big-bells.png' })
+                  ),
+                  '\xA0purchase price x 4'
+                )
+              ),
+              _react2.default.createElement(
+                _reactBootstrap.Row,
+                null,
+                _react2.default.createElement(
+                  _reactBootstrap.Col,
+                  { sm: 6 },
+                  _react2.default.createElement(
+                    'h5',
+                    null,
+                    'resale value'
+                  ),
+                  _react2.default.createElement('img', { src: '/images/sprites/nl/items/small-bells.png' }),
+                  ' ',
+                  item['Resale Value']
+                ),
+                _react2.default.createElement(
+                  _reactBootstrap.Col,
+                  { sm: 6 },
+                  _react2.default.createElement(
+                    'h5',
+                    null,
+                    '\xA0'
+                  ),
+                  _react2.default.createElement(
+                    _reactBootstrap.OverlayTrigger,
+                    { placement: 'top', overlay: bellBoom },
+                    _react2.default.createElement('img', { src: '/images/sprites/nl/items/big-bells.png' })
+                  ),
+                  '\xA0resale value x 4'
+                )
+              )
+            )
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { sm: 12 },
+              _react2.default.createElement(
+                'strong',
+                null,
+                'obtained from'
+              ),
+              ' ',
+              _react2.default.createElement('img', { src: '/images/sprites/nl/map/timmyandtommy.gif' }),
+              ' ',
+              item['Obtained From']
+            )
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { sm: 12 },
+              _react2.default.createElement(
+                'h4',
+                null,
+                'properties'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { sm: 3 },
+              _react2.default.createElement(
+                'h5',
+                null,
+                _react2.default.createElement(
+                  'strong',
+                  null,
+                  'HHA theme(s)'
+                )
+              ),
+              item['HHA Theme'] ? item['HHA Theme'].map(function (theme) {
+                return _react2.default.createElement(
+                  _reactBootstrap.Button,
+                  { bsSize: 'xsmall', key: theme },
+                  theme
+                );
+              }) : null
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { sm: 3 },
+              _react2.default.createElement(
+                'h5',
+                null,
+                'style'
+              ),
+              _react2.default.createElement(
+                _reactBootstrap.Button,
+                { bsSize: 'xsmall' },
+                item.Style
+              )
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { sm: 3 },
+              _react2.default.createElement(
+                'h5',
+                null,
+                'color(s)'
+              ),
+              item['Color(s)'] ? item['Color(s)'].map(function (color) {
+                return _react2.default.createElement(
+                  _reactBootstrap.Button,
+                  { bsSize: 'xsmall', key: color },
+                  color
+                );
+              }) : null
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { sm: 3 },
+              _react2.default.createElement(
+                'h5',
+                null,
+                'size'
+              ),
+              _react2.default.createElement(
+                _reactBootstrap.Button,
+                { bsStyle: 'info', bsSize: 'xsmall', disabled: true },
+                '\xA0\xA0\xA0'
+              ),
+              _react2.default.createElement(
+                _reactBootstrap.Button,
+                { bsStyle: 'info', bsSize: 'xsmall', disabled: true },
+                '\xA0\xA0\xA0'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Row,
+            null,
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { sm: 3 },
+              _react2.default.createElement(
+                'h5',
+                null,
+                'furniture type'
+              ),
+              'tbd'
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              { sm: 3 },
+              _react2.default.createElement(
+                'h5',
+                null,
+                'interaction'
+              ),
+              'tbd'
+            )
+          ),
+          item.Customization ? this.renderCustomization(item.Customization[0]) : null
+        )
       );
     }
   }]);
@@ -19995,7 +20258,6 @@ var Furniture = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      console.log(this.state);
       return _react2.default.createElement(
         'div',
         null,

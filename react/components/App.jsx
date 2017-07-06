@@ -15,7 +15,9 @@ export default function App (props) {
       <Navigation />
       <Col sm={10} smOffset={1} md={8} mdOffset={2} lg={6} lgOffset={3}>
         <Route exact path="/" component={Landing} />
+
         <Route path="/furniture" component={FurnitureContainer} />
+
         <Route path="/blue-bed-nl" component={FurnitureDetailsNL} />
         <Route path="/blue-bed-hhd" component={FurnitureDetailsHHD} />
         <Route path="/blue-wall-nl" component={WallpaperDetailsNL} />
