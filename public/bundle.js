@@ -11117,7 +11117,8 @@ var Customization = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      console.log(this.state);
+      var customization = this.state.customization;
+
       return _react2.default.createElement(
         'div',
         null,
@@ -11210,14 +11211,14 @@ var Customization = function (_Component) {
                   _react2.default.createElement(
                     'td',
                     null,
-                    'wood color'
+                    customization['Feature 1']
                   ),
                   _react2.default.createElement(
                     'td',
                     null,
-                    'blue'
+                    customization['Original 1']
                   ),
-                  this.state.customization['Options 1'] ? this.renderOptions(this.state.customization['Options 1']) : null
+                  customization['Options 1'] ? this.renderOptions(customization['Options 1']) : null
                 ),
                 _react2.default.createElement(
                   'tr',

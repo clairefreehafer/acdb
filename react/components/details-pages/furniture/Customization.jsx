@@ -29,9 +29,9 @@ export default class Customization extends Component {
       let optionsArray = options.split(', ');
       return (
         <td>
-          {optionsArray.map(option => {
-            return <div key={option}>{option}</div>
-          })}
+          {optionsArray.map(option => (
+            <div key={option}>{option}</div>
+          ))}
         </td>
       )
     } else return null;
@@ -50,7 +50,8 @@ export default class Customization extends Component {
   }
 
   render () {
-    console.log(this.state)
+    let customization = this.state.customization;
+
     return (
       <div>
         <Row>
@@ -85,15 +86,24 @@ export default class Customization extends Component {
                 </tr>
               </thead>
               <tbody>
+              {/* first customization */}
                 <tr>
-                  <td>wood color</td>
-                  <td>blue</td>
-                  {this.state.customization['Options 1'] ? this.renderOptions(this.state.customization['Options 1'])
+                  {/* feature */}
+                  <td>{customization['Feature 1']}</td>
+                  {/* oritional */}
+                  <td>{customization['Original 1']}</td>
+                  {/* options */}
+                  {customization['Options 1'] ? this.renderOptions(customization['Options 1'])
                 : null}
                 </tr>
+
+                {/* second customization */}
                 <tr>
+                  {/* feature */}
                   <td>bedding</td>
+                  {/* oritional */}
                   <td>yellow</td>
+                  {/* options */}
                   <td>???</td>
                 </tr>
               </tbody>
