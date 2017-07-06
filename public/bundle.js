@@ -19333,7 +19333,7 @@ function CustomizedImages(props) {
         _react2.default.createElement(
           'div',
           { className: 'customizedText' },
-          _react2.default.createElement('img', { src: 'images/sprites/nl/items/furniture-leaf.png' }),
+          _react2.default.createElement('img', { src: '/images/sprites/nl/items/furniture-leaf.png' }),
           _react2.default.createElement('br', null),
           _react2.default.createElement(
             'strong',
@@ -19357,7 +19357,7 @@ function CustomizedImages(props) {
         _react2.default.createElement(
           'div',
           { className: 'customizedText' },
-          _react2.default.createElement('img', { src: 'images/sprites/nl/items/customized-leaf.png' }),
+          _react2.default.createElement('img', { src: '/images/sprites/nl/items/customized-leaf.png' }),
           _react2.default.createElement('br', null),
           _react2.default.createElement(
             'strong',
@@ -19382,7 +19382,7 @@ function CustomizedImages(props) {
         _react2.default.createElement(
           'div',
           { className: 'customizedText' },
-          _react2.default.createElement('img', { src: 'images/sprites/nl/items/customized-leaf.png' }),
+          _react2.default.createElement('img', { src: '/images/sprites/nl/items/customized-leaf.png' }),
           _react2.default.createElement('br', null),
           _react2.default.createElement(
             'strong',
@@ -19406,7 +19406,7 @@ function CustomizedImages(props) {
         _react2.default.createElement(
           'div',
           { className: 'customizedText' },
-          _react2.default.createElement('img', { src: 'images/sprites/nl/items/customized-leaf.png' }),
+          _react2.default.createElement('img', { src: '/images/sprites/nl/items/customized-leaf.png' }),
           _react2.default.createElement('br', null),
           _react2.default.createElement(
             'strong',
