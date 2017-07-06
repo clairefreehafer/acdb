@@ -11117,6 +11117,7 @@ var Customization = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
+      console.log(this.state.customization);
       var customization = this.state.customization;
 
       return _react2.default.createElement(
@@ -11156,7 +11157,16 @@ var Customization = function (_Component) {
               'fee to change'
             ),
             _react2.default.createElement('img', { src: '/images/sprites/nl/items/small-bells.png' }),
-            ' 210'
+            '\xA0',
+            customization['Fee to Change'] ? _react2.default.createElement(
+              'span',
+              null,
+              customization['Fee to Change']
+            ) : _react2.default.createElement(
+              'span',
+              null,
+              'unknown'
+            )
           ),
           _react2.default.createElement(
             _reactBootstrap.Col,
@@ -11167,7 +11177,16 @@ var Customization = function (_Component) {
               'fee to revert'
             ),
             _react2.default.createElement('img', { src: '/images/sprites/nl/items/small-bells.png' }),
-            ' 105'
+            '\xA0',
+            customization['Fee to Revert'] ? _react2.default.createElement(
+              'span',
+              null,
+              customization['Fee to Revert']
+            ) : _react2.default.createElement(
+              'span',
+              null,
+              'unknown'
+            )
           )
         ),
         _react2.default.createElement(
@@ -11220,25 +11239,21 @@ var Customization = function (_Component) {
                   ),
                   customization['Options 1'] ? this.renderOptions(customization['Options 1']) : null
                 ),
-                _react2.default.createElement(
+                customization['Feature 2'] ? _react2.default.createElement(
                   'tr',
                   null,
                   _react2.default.createElement(
                     'td',
                     null,
-                    'bedding'
+                    customization['Feature 2']
                   ),
                   _react2.default.createElement(
                     'td',
                     null,
-                    'yellow'
+                    customization['Original 2']
                   ),
-                  _react2.default.createElement(
-                    'td',
-                    null,
-                    '???'
-                  )
-                )
+                  this.renderOptions(customization['Options 2'])
+                ) : null
               )
             )
           )

@@ -50,6 +50,7 @@ export default class Customization extends Component {
   }
 
   render () {
+    console.log(this.state.customization)
     let customization = this.state.customization;
 
     return (
@@ -66,12 +67,16 @@ export default class Customization extends Component {
           </Col>
           <Col sm={4}>
             <h5>fee to change</h5>
-            <img src="/images/sprites/nl/items/small-bells.png" /> 210
+            <img src="/images/sprites/nl/items/small-bells.png" />&nbsp;
+            {customization['Fee to Change'] ? <span>{customization['Fee to Change']}</span>
+            : <span>unknown</span>}
           </Col>
 
           <Col sm={4}>
             <h5>fee to revert</h5>
-            <img src="/images/sprites/nl/items/small-bells.png" /> 105
+            <img src="/images/sprites/nl/items/small-bells.png" />&nbsp;
+            {customization['Fee to Revert'] ? <span>{customization['Fee to Revert']}</span>
+            : <span>unknown</span>}
           </Col>
         </Row>
 
@@ -98,14 +103,16 @@ export default class Customization extends Component {
                 </tr>
 
                 {/* second customization */}
-                <tr>
-                  {/* feature */}
-                  <td>bedding</td>
-                  {/* oritional */}
-                  <td>yellow</td>
-                  {/* options */}
-                  <td>???</td>
-                </tr>
+                {customization['Feature 2'] ?
+                  <tr>
+                    {/* feature */}
+                    <td>{customization['Feature 2']}</td>
+                    {/* oritional */}
+                    <td>{customization['Original 2']}</td>
+                    {/* options */}
+                    {this.renderOptions(customization['Options 2'])}
+                  </tr>
+                : null}
               </tbody>
             </Table>
           </Col>
