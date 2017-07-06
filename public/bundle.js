@@ -19581,13 +19581,18 @@ var obtainedFrom = _react2.default.createElement(
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = FurnitureDetailsNL;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
 var _reactBootstrap = __webpack_require__(29);
+
+var _axios = __webpack_require__(493);
+
+var _axios2 = _interopRequireDefault(_axios);
 
 var _GameSelect = __webpack_require__(86);
 
@@ -19599,14 +19604,53 @@ var _Customization2 = _interopRequireDefault(_Customization);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function FurnitureDetailsNL(props) {
-  console.log('test', props);
-  return _react2.default.createElement(
-    'div',
-    null,
-    'test'
-  );
-}
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var FurnitureDetailsNL = function (_React$Component) {
+  _inherits(FurnitureDetailsNL, _React$Component);
+
+  function FurnitureDetailsNL(props) {
+    _classCallCheck(this, FurnitureDetailsNL);
+
+    var _this = _possibleConstructorReturn(this, (FurnitureDetailsNL.__proto__ || Object.getPrototypeOf(FurnitureDetailsNL)).call(this));
+
+    _this.state = {
+      item: {}
+    };
+    return _this;
+  }
+
+  _createClass(FurnitureDetailsNL, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      var _this2 = this;
+
+      console.log('test');
+      _axios2.default.get('/api/furniture/' + this.props.match.params.id).then(function (res) {
+        return _this2.setState({ item: res.data.fields });
+      }).catch(console.error);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      // this.props.match.params.id
+      console.log(this.state);
+      return _react2.default.createElement(
+        'div',
+        null,
+        'test'
+      );
+    }
+  }]);
+
+  return FurnitureDetailsNL;
+}(_react2.default.Component);
+
+exports.default = FurnitureDetailsNL;
 
 /***/ }),
 /* 221 */

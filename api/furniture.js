@@ -34,4 +34,13 @@ router.get('/page/:pageNum', (req, res, next) => {
   });
 })
 
+/*******************************************/
+/********** SINGLE FURNITURE PAGE **********/
+/*******************************************/
+router.get('/:id', (req, res, next) => {
+  base('Furniture').find(req.params.id, function(err, record) {
+    if (err) { console.error(err); return; }
+    res.send(record);
+  });
+})
 module.exports = router;
