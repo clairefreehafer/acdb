@@ -21,6 +21,7 @@ h4 {
   border: none;
 }
 
+/* item details page */
 .details-thumbnail {
   height: 175px;
   margin-bottom: 20px;
@@ -36,6 +37,7 @@ h4 {
   bottom: 0;
 }
 
+/** item colors */
 #blue {
   background-color: blue;
   border-color: darkblue;
@@ -46,6 +48,7 @@ h4 {
   background-color: yellow;
 }
 
+/** view customization pictures link */
 #view-pictures {
   border-bottom: 1px solid black;
   padding-bottom: 3px;
@@ -55,6 +58,7 @@ h4 {
   cursor: pointer;
 }
 
+/** customization pictures modal */
 .modal-title {
   border-bottom: none;
   margin-top: 0px;

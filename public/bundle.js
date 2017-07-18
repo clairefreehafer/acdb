@@ -47862,7 +47862,7 @@ var Search = function (_React$Component) {
               _react2.default.createElement(
                 _reactBootstrap.Panel,
                 { collapsible: true, expanded: this.state.advancedSearch },
-                'test'
+                'game, category, color, style, theme, set'
               )
             )
           )

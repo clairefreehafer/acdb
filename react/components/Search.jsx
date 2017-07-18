@@ -52,7 +52,7 @@ export default class Search extends React.Component {
               }
             </small>
             <div id="advanced-search-panel">
-              <Panel collapsible expanded={this.state.advancedSearch}>test</Panel>
+              <Panel collapsible expanded={this.state.advancedSearch}>game, category, color, style, theme, set</Panel>
             </div>
           </FormGroup>
         </Form>
