@@ -6,4 +6,13 @@ there are many resources like this that already exist, and most of them are grea
 
 currently, acdb exists as a mess of prefilled react components. it's still being designed. eventually, it will be populated with information from airtable, have express routes, and extensive search and filter functionality.
 
-in the mean time, acdb is helping me learn more about responsive design, so please excuse any wonkiness if viewing on a smaller screen. it currently looks best on a computer. :-)
+## tech
+
+- node
+- express
+- react
+- react router
+- react-bootstrap
+- webpack
+- axios
+- airtable api
