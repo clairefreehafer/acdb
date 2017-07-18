@@ -4,6 +4,23 @@ h4 {
   padding-bottom: 5px;
 }
 
+/* advanced search toggle */
+#advanced-search-toggle {
+  color: #337ab7;
+  padding-left: 10px;
+}
+
+#advanced-search-toggle:hover {
+  color: #23527c;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* advanced search panel */
+#advanced-search-panel div {
+  border: none;
+}
+
 .details-thumbnail {
   height: 175px;
   margin-bottom: 20px;

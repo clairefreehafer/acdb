@@ -20320,6 +20320,10 @@ var _WallpaperDetailsNL = __webpack_require__(247);
 
 var _WallpaperDetailsNL2 = _interopRequireDefault(_WallpaperDetailsNL);
 
+var _Search = __webpack_require__(517);
+
+var _Search2 = _interopRequireDefault(_Search);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App(props) {
@@ -20328,13 +20332,26 @@ function App(props) {
     { id: 'app' },
     _react2.default.createElement(_Navigation2.default, null),
     _react2.default.createElement(
-      _reactBootstrap.Col,
-      { sm: 10, smOffset: 1, md: 8, mdOffset: 2, lg: 6, lgOffset: 3 },
-      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Landing2.default }),
-      _react2.default.createElement(_reactRouterDom.Route, { path: '/furniture', component: _FurnitureContainer2.default }),
-      _react2.default.createElement(_reactRouterDom.Route, { path: '/blue-bed-nl', component: _FurnitureDetailsNL2.default }),
-      _react2.default.createElement(_reactRouterDom.Route, { path: '/blue-bed-hhd', component: _FurnitureDetailsHHD2.default }),
-      _react2.default.createElement(_reactRouterDom.Route, { path: '/blue-wall-nl', component: _WallpaperDetailsNL2.default })
+      _reactBootstrap.Row,
+      null,
+      _react2.default.createElement(
+        _reactBootstrap.Col,
+        { sm: 10, smOffset: 1, md: 8, mdOffset: 2, lg: 6, lgOffset: 3 },
+        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _Landing2.default }),
+        _react2.default.createElement(_reactRouterDom.Route, { path: '/furniture', component: _FurnitureContainer2.default }),
+        _react2.default.createElement(_reactRouterDom.Route, { path: '/blue-bed-nl', component: _FurnitureDetailsNL2.default }),
+        _react2.default.createElement(_reactRouterDom.Route, { path: '/blue-bed-hhd', component: _FurnitureDetailsHHD2.default }),
+        _react2.default.createElement(_reactRouterDom.Route, { path: '/blue-wall-nl', component: _WallpaperDetailsNL2.default })
+      )
+    ),
+    _react2.default.createElement(
+      _reactBootstrap.Row,
+      null,
+      _react2.default.createElement(
+        _reactBootstrap.Col,
+        { sm: 10, smOffset: 1, md: 8, mdOffset: 2, lg: 6, lgOffset: 3 },
+        _react2.default.createElement(_Search2.default, null)
+      )
     )
   );
 }
@@ -47741,6 +47758,123 @@ var valueEqual = function valueEqual(a, b) {
 };
 
 exports.default = valueEqual;
+
+/***/ }),
+/* 517 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactBootstrap = __webpack_require__(30);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var formGroupStyle = {
+  width: '100%'
+};
+
+var controlLabelStyle = {
+  width: '30%',
+  paddingRight: '10px',
+  textAlign: 'right'
+};
+
+var buttonStyle = {
+  marginLeft: '10px'
+};
+
+var Search = function (_React$Component) {
+  _inherits(Search, _React$Component);
+
+  function Search(props) {
+    _classCallCheck(this, Search);
+
+    var _this = _possibleConstructorReturn(this, (Search.__proto__ || Object.getPrototypeOf(Search)).call(this));
+
+    _this.state = {
+      advancedSearch: false
+    };
+
+    _this.toggleAdvancedSearch = _this.toggleAdvancedSearch.bind(_this);
+    return _this;
+  }
+
+  _createClass(Search, [{
+    key: 'toggleAdvancedSearch',
+    value: function toggleAdvancedSearch() {
+      if (this.state.advancedSearch) {
+        this.setState({ advancedSearch: false });
+      } else {
+        this.setState({ advancedSearch: true });
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { id: 'search' },
+        _react2.default.createElement(
+          _reactBootstrap.Form,
+          { inline: true },
+          _react2.default.createElement(
+            _reactBootstrap.FormGroup,
+            { controlId: 'search', bsSize: 'sm', style: formGroupStyle },
+            _react2.default.createElement(_reactBootstrap.FormControl, { type: 'text', placeholder: '' }),
+            _react2.default.createElement(
+              _reactBootstrap.Button,
+              { type: 'submit', bsSize: 'sm', style: buttonStyle },
+              'search'
+            ),
+            _react2.default.createElement(
+              'small',
+              { id: 'advanced-search-toggle', onClick: this.toggleAdvancedSearch },
+              this.state.advancedSearch ? _react2.default.createElement(
+                'span',
+                null,
+                'collapse'
+              ) : _react2.default.createElement(
+                'span',
+                null,
+                'advanced search'
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { id: 'advanced-search-panel' },
+              _react2.default.createElement(
+                _reactBootstrap.Panel,
+                { collapsible: true, expanded: this.state.advancedSearch },
+                'test'
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Search;
+}(_react2.default.Component);
+
+exports.default = Search;
 
 /***/ })
 /******/ ]);
